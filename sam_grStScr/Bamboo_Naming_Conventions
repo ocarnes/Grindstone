@@ -1,0 +1,18 @@
+asset file name convention:
+<assetName>_<pipelineStep>_<VERSION>.<EXT>
+
+<PROJECT>/
+	assets/
+		props/
+			foliage/
+				<ASSET_NAME>/
+					<PIPELINE_STEP>/
+						PUBLISH/
+						work/
+	sequences/
+		<SCENE>
+			<SHOT> e.g. shot_001
+				<PIPELINE_STEP>
+					PUBLISH/
+					work/
+

@@ -1,0 +1,11 @@
+http://help.autodesk.com/view/MAYAUL/2015/ENU/?guid=GUID-55B63946-CDC9-42E5-9B6E-45EE45CFC7FC
+
+http://forums.cgsociety.org/archive/index.php?t-690460.html
+
+http://kevman3d.blogspot.com/2015/05/introduction-to-simple-maya-ui-coding.html
+
+https://help.autodesk.com/cloudhelp/2015/ENU/Maya-Tech-Docs/Commands/window.html#flagwidthHeight
+
+http://www.bojandjulbic.com/code-snippets-creating-gui-using-python-maya/
+
+http://download.autodesk.com/us/maya/2011help/CommandsPython/text.html

@@ -1,0 +1,17 @@
+string $shelfButtons[] = `shelfLayout -q -childArray "Custom"`;
+
+for ( $button in $shelfButtons )
+{
+   string $label;
+
+   // Assert that this is a shelfButton
+   if ( `objectTypeUI -isType "shelfButton" $button` )
+   {
+      $label = `shelfButton -q -label $button`;
+
+      // If this button has the label we're looking for,
+      // delete the button.
+      if ( "helloButton" == $label )
+         deleteUI $button;
+   }
+};

@@ -40,3 +40,6 @@ http://download.autodesk.com/us/maya/2011help/CommandsPython/shelfButton.html
 => Sourcing Python script to a shelf button
 http://forums.cgsociety.org/archive/index.php?t-838592.html
 
+=> Tutorials on MEL based control of buttons and shelves and tabs
+http://ewertb.soundlinker.com/mel/mel.030.php
+

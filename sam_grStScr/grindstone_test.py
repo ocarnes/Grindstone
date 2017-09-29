@@ -40,7 +40,9 @@ class GrindestoneWindow:
         # Add controls into this Layout
         message = cmds.textField()
         cmds.button(label='click me', command=lambda *args: self.printTxtField( message ))
-        #cmds.button(lable='make sphere', 
+        cmds.button(label='make sphere', command='cmds.polySphere()')
+        cmds.button(label='list scene items', command='print cmds.ls(transforms=True, showType=True)')
+        cmds.button(label='list cameras', command='print cmds.listCameras()')
 
         # Display the window
         cmds.showWindow()

@@ -8,7 +8,8 @@ import maya.cmds as cmds
 
 
 
-
+# **************************************************************************************************
+# GrindstoneWindow Class
 class GrindestoneWindow:
     
     winID = "grindstoneWindow"
@@ -39,11 +40,13 @@ class GrindestoneWindow:
         # Add controls into this Layout
         message = cmds.textField()
         cmds.button(label='click me', command=lambda *args: self.printTxtField( message ))
-        #cmds.button(label='click me', command='print "Hello!"')
-        #cmds.button(label='click me', command='print cmds.textField(self.message, query=True, text=True)')
+        #cmds.button(lable='make sphere', 
 
         # Display the window
         cmds.showWindow()
+        
+# End GrindstoneWindow Class
+# **************************************************************************************************
 
 
 
@@ -52,9 +55,10 @@ class GrindestoneWindow:
 # Plug-in 
 ##########################################################
 class MyCommandClass( OpenMaya.MPxCommand ):
+    
     kPluginCmdName = 'mimic'
     
-    
+    # create an instance of the Grindstone window provider
     windowProvider = GrindestoneWindow()
     
     
@@ -70,7 +74,10 @@ class MyCommandClass( OpenMaya.MPxCommand ):
     
     def doIt(self, args):
 
+       # pass control to the window provider
        self.windowProvider.run()
+    
+    
     
     
 ##########################################################
@@ -99,5 +106,6 @@ def uninitializePlugin( mobject ):
     mplugin = OpenMaya.MFnPlugin( mobject )
     try:
         mplugin.deregisterCommand( MyCommandClass.kPluginCmdName )
+        
     except:
         sys.stderr.write( 'Failed to unregister command: ' + MyCommandClass.kPluginCmdName )

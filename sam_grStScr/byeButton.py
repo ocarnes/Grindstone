@@ -1,18 +1,11 @@
-#File in progress, do not execute
-
-import maya.cmds
-
-string shelfButtons[] = cmds.shelfLayout("Custom",q=1,ca=1)
-
-for ( tarButton in shelfButtons )
-{
-   string label;
-
-   if(cmds.objectTypeUI(tarButton) == "shelfButton")
-   {
-      label = cmds.shelfButton(tarButton,q=1,label=1)
-
-      if ( "helloButton" == $label )
-         deleteUI $button
-   }
-}
+import pymel.core as pm
+shelfButtons=pm.shelfLayout("Custom", q=1, childArray=1)
+for button in shelfButtons:
+	label = ""
+	# Assert that this is a shelfButton 
+	if pm.objectTypeUI(button, isType="shelfButton"):
+		label=str(pm.shelfButton(button, q=1, label=1))
+		# If this button has the label we're looking for, 
+		# delete the button. 
+		if "helloButton" == label:
+			pm.deleteUI(button)

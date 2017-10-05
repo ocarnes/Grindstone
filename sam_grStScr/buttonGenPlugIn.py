@@ -3,12 +3,26 @@ import maya.api.OpenMaya as OpenMaya
 import maya.cmds as cmds
 # ... additional imports here ...
 
-def hiButton(tableName):
-    cmds.setParent(tableName)
-    cmds.shelfButton(annotation="Print \"Hello\".", image1="commandButton.png", command="print \"Hello\\n\"", label="helloButton")
-    
-def byeButton(tableName):
-    shelfButtons=cmds.shelfLayout(tableName, q=1, ca=1)
+def hiButton(theShelf):
+    cmds.setParent(theShelf)
+    buttonTag = True
+    shelfButton=cmds.shelfLayout(theShelf,q=1,ca=1)
+    #cmds.shelfButton(annotation="Print \"Hello\".", image1="commandButton.png", command="print \"Hello\\n\"", label="helloButton")
+    if shelfButton is None:	    
+        cmds.shelfButton(annotation="Print \"Hello\".", image1="commandButton.png", command="print \"Hello\\n\"", label="helloButton")
+        buttonTag = False
+    else:
+        for button in shelfButton:
+            label = ""
+            if cmds.objectTypeUI(button, isType="shelfButton"):
+                label=str(cmds.shelfButton(button, q=1, label=1))
+                if "helloButton" == label:
+                    buttonTag = False
+    if buttonTag:
+        cmds.shelfButton(annotation="Print \"Hello\".", image1="commandButton.png", command="print \"Hello\\n\"", label="helloButton")
+
+def byeButton(theShelf):
+    shelfButtons=cmds.shelfLayout(theShelf, q=1, ca=1)
     for button in shelfButtons:
         label = ""
         # Assert that this is a shelfButton 

@@ -3,12 +3,12 @@ import maya.api.OpenMaya as OpenMaya
 import maya.cmds as cmds
 # ... additional imports here ...
 
-def hiButton():
-    cmds.setParent("Custom")
+def hiButton(tableName):
+    cmds.setParent(tableName)
     cmds.shelfButton(annotation="Print \"Hello\".", image1="commandButton.png", command="print \"Hello\\n\"", label="helloButton")
     
-def byeButton():
-    shelfButtons=cmds.shelfLayout("Custom", q=1, ca=1)
+def byeButton(tableName):
+    shelfButtons=cmds.shelfLayout(tableName, q=1, ca=1)
     for button in shelfButtons:
         label = ""
         # Assert that this is a shelfButton 
@@ -37,9 +37,9 @@ def maya_useNewAPI():
 
 def initializePlugin(mobject):
     ''' Initialize the plug-in when Maya loads it. '''
-    hiButton()
+    hiButton("Custom")
 
 
 def uninitializePlugin(mobject):
     ''' Uninitialize the plug-in when Maya un-loads it. '''
-    byeButton()
+    byeButton("Custom")

@@ -1,0 +1,48 @@
+=> Setup of using Python and MEL in Maya
+http://help.autodesk.com/view/MAYAUL/2015/ENU/?guid=GUID-55B63946-CDC9-42E5-9B6E-45EE45CFC7FC
+
+=> Generating a window via python script in the Maya command window
+http://forums.cgsociety.org/archive/index.php?t-690460.html
+
+=> Producing a window in Maya with a number of options (text entry, buttons, etc.)
+http://kevman3d.blogspot.com/2015/05/introduction-to-simple-maya-ui-coding.html
+
+=> Maya "window" command documentation detailing possible flags/argumetns
+https://help.autodesk.com/cloudhelp/2015/ENU/Maya-Tech-Docs/Commands/window.html
+
+=> Generating a window with column and text elements in Maya
+http://www.bojandjulbic.com/code-snippets-creating-gui-using-python-maya/
+
+=> Maya "text" command documentation
+http://download.autodesk.com/us/maya/2011help/CommandsPython/text.html
+
+=> Adding shelves via python scripts
+http://forums.cgsociety.org/archive/index.php?t-1091198.html
+
+=> Coordination between Python and MEL within Maya
+https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/Maya/files/GUID-55B63946-CDC9-42E5-9B6E-45EE45CFC7FC-htm.html
+
+=> MEL handling shelves within Maya
+https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2015/ENU/Maya/files/Interface-overview-Load-the-default-shelves-htm.html
+
+=> Scripting custom Maya shelves with Python
+http://bindpose.com/scripting-custom-shelf-in-maya-python/
+
+=> Creating and editing shelf buttons in MEL
+http://ewertb.soundlinker.com/mel/mel.030.php
+
+=> Base class for constructing custom shelves
+https://gist.github.com/vshotarov/1c3176fe9e38dcaadd1e56c2f15c95d9
+
+=> Maya "shelfButton" command documentation for MEL ("command" in Python)
+http://download.autodesk.com/us/maya/2011help/CommandsPython/shelfButton.html
+
+=> Sourcing Python script to a shelf button
+http://forums.cgsociety.org/archive/index.php?t-838592.html
+
+=> Tutorials on MEL based control of buttons and shelves and tabs
+http://ewertb.soundlinker.com/mel/mel.030.php
+
+=> Executable for converting MEL to Python, runnable in Maya
+==> NOTE!!!!! Only good for general structure and functions. Output produced needs editing to be incorporated into Grindstone
+https://www.highend3d.com/maya/script/ezmel2python-for-maya

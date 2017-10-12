@@ -1,4 +1,4 @@
-import inspect
+import os
 import maya.cmds as cmds
 import gs_scripts.test_1 as t1
 
@@ -15,22 +15,12 @@ class GrindstoneWindow:
     
     
     def __init__(self):
-        pass
-        '''for attr in gs_scripts.__dict__.iteritems():
-            #if hasattr(attr, getObject):
-                #self.scripts.append(attr.getObject())
-            
-            try:
-                self.scripts.append(attr.getObject())
-                print attr
-            except:
-                print "hello"
-        print len(self.scripts)'''
-        
-        '''self.temp = inspect.getmembers(gs_scripts, inspect.ismodule)
-        print len(self.temp)
-        for i in range(0, len(self.temp)):
-            print self.temp[i]'''
+        for fn in os.listdir('./scripts'):
+            if fn[-3:] == ".py" and fn != "__init__.py":
+                command = "import scripts." + fn[:-3] + " as temp"
+                exec(command)
+                scripts.append(temp.getObject())
+                del temp
         
         
         
@@ -57,10 +47,10 @@ class GrindstoneWindow:
         cmds.button(label='list scene items', command='print cmds.ls(transforms=True)')
         cmds.button(label='list cameras', command='print cmds.listCameras()')
         
-        '''for i in range(0, len(self.scripts) - 1):
+        for i in range(0, len(self.scripts) - 1):
             print i
-            cmds.button(label=i, command=lambda *args: self.scripts[i].doCheck())'''
-        cmds.button(label='1', command=lambda *args: self.test.doCheck())
+            cmds.button(label=i, command=lambda *args: self.scripts[i].doCheck())
+        cmds.button(label='x', command=lambda *args: self.test.doCheck())
 
         # Display the window
         cmds.showWindow()

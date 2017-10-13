@@ -1,4 +1,4 @@
-class TestClassOne:
+class TestClassThree:
     
     
     def __init__(self):
@@ -6,8 +6,8 @@ class TestClassOne:
        
         
     def doCheck(self):
-        print "1 check!"
+        print "3 check!"
         
         
 def getObject():
-    return TestClassOne()
+    return TestClassThree()

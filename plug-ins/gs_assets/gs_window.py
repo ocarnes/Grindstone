@@ -16,6 +16,7 @@ class GrindstoneWindow:
         print "Hello!"
     
     
+    
     def __init__(self):
         for fn in os.listdir('C:/Users/adamsse/Documents/maya/2018/plug-ins/gs_assets/gs_scripts'):
             if fn[-3:] == ".py" and fn != "__init__.py":
@@ -23,10 +24,6 @@ class GrindstoneWindow:
                 exec(command)
                 self.scripts.append(temp.getObject())
                 del temp
-                
-        for s in self.scripts:
-            print s
-        print len(self.scripts)
         
         
         
@@ -52,17 +49,12 @@ class GrindstoneWindow:
         cmds.button(label='make sphere', command='cmds.polySphere()')
         cmds.button(label='list scene items', command='print cmds.ls(transforms=True)')
         cmds.button(label='list cameras', command='print cmds.listCameras()')
+        cmds.button(label='delete window', command=lambda *args: cmds.deleteUI(self.winID))
         
         for i in range(0, len(self.scripts)):
-            print i
-            print self.scripts[i]
-            #cmds.button(label=i, command=lambda i: self.scripts[i].doCheck())
-            cmds.button(label=i, command=functools.partial(lambda i, *args: self.scripts[i].doCheck() , i)
-)
-        '''for s in self.scripts:
-            print s
-            print s.doCheck()
-            cmds.button(label=s, command=lambda s: s.doCheck())'''
+            cmds.button(label=i, command=functools.partial(lambda i, *args: self.scripts[i].doCheck() , i))
+
+
 
         # Display the window
         cmds.showWindow()

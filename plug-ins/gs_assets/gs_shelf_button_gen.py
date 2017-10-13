@@ -8,7 +8,7 @@ def hiButton(theShelf, buttonCommand):
     cmds.setParent(theShelf)
     buttonTag = True
     shelfButton=cmds.shelfLayout(theShelf,q=1,ca=1)
-    #cmds.shelfButton(annotation="Print \"Hello\".", image1="commandButton.png", command="print \"Hello\\n\"", label="helloButton")
+
     if shelfButton is None:	    
         cmds.shelfButton(annotation="Print \"Hello\".", image1="commandButton.png", command="mel.eval(\"" + buttonCommand + "\")", label="helloButton")
         buttonTag = False

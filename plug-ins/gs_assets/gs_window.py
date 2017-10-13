@@ -11,6 +11,8 @@ class GrindstoneWindow:
     
     scripts = []
     
+    runTests = 0
+    
     
     def sayHello(self):
         print "Hello!"
@@ -31,6 +33,18 @@ class GrindstoneWindow:
         print cmds.textField(fieldID, query=True, text=True)
         
         
+    def runScripts(self):
+        if self.runTests:
+            for s in self.scripts:
+                s.doCheck()
+                
+                
+    def toggleX(self):
+        if self.runTests:
+            self.runTests = 0
+        else:
+            self.runTests = 1
+        
         
     def run(self):
         # Test to make sure that the UI isn't already active
@@ -49,11 +63,15 @@ class GrindstoneWindow:
         cmds.button(label='make sphere', command='cmds.polySphere()')
         cmds.button(label='list scene items', command='print cmds.ls(transforms=True)')
         cmds.button(label='list cameras', command='print cmds.listCameras()')
-        cmds.button(label='delete window', command=lambda *args: cmds.deleteUI(self.winID))
         
         for i in range(0, len(self.scripts)):
             cmds.button(label=i, command=functools.partial(lambda i, *args: self.scripts[i].doCheck() , i))
 
+        # check box
+        cmds.checkBox(label='Run Tests', align='center', onCommand=lambda *args: self.toggleX(), offCommand=lambda *args: self.toggleX())
+        #cmds.button(label='display checkbox state', command=lambda *args: print self.runTests)
+        cmds.button(label='RUN', command=lambda *args: self.runScripts())
+        
 
 
         # Display the window

@@ -26,8 +26,8 @@ class GrindstoneWindow:
                 exec(command)
                 self.scripts.append(temp.getObject())
                 del temp
-        
-        
+                
+
         
     def printTxtField(self, fieldID):
         print cmds.textField(fieldID, query=True, text=True)
@@ -50,6 +50,11 @@ class GrindstoneWindow:
         # Test to make sure that the UI isn't already active
         if cmds.window(self.winID, exists=True):
             cmds.deleteUI(self.winID)
+            
+        
+        # reset the runTests flag to 0
+        self.runTests = 0
+        
     
         # Now create a fresh UI window
         cmds.window(self.winID)
@@ -58,18 +63,17 @@ class GrindstoneWindow:
         cmds.columnLayout()
 
         # Add controls into this Layout
-        message = cmds.textField()
+        '''message = cmds.textField()
         cmds.button(label='click me', command=lambda *args: self.printTxtField( message ))
         cmds.button(label='make sphere', command='cmds.polySphere()')
         cmds.button(label='list scene items', command='print cmds.ls(transforms=True)')
         cmds.button(label='list cameras', command='print cmds.listCameras()')
         
         for i in range(0, len(self.scripts)):
-            cmds.button(label=i, command=functools.partial(lambda i, *args: self.scripts[i].doCheck() , i))
+            cmds.button(label=i, command=functools.partial(lambda i, *args: self.scripts[i].doCheck() , i))'''
 
         # check box
         cmds.checkBox(label='Run Tests', align='center', onCommand=lambda *args: self.toggleX(), offCommand=lambda *args: self.toggleX())
-        #cmds.button(label='display checkbox state', command=lambda *args: print self.runTests)
         cmds.button(label='RUN', command=lambda *args: self.runScripts())
         
 

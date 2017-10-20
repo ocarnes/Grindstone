@@ -46,3 +46,6 @@ http://ewertb.soundlinker.com/mel/mel.030.php
 => Executable for converting MEL to Python, runnable in Maya
 ==> NOTE!!!!! Only good for general structure and functions. Output produced needs editing to be incorporated into Grindstone
 https://www.highend3d.com/maya/script/ezmel2python-for-maya
+
+=> Discussion regarding checking if history nodes exist (for Maya 2014)
+http://forums.cgsociety.org/archive/index.php?t-1173199.html

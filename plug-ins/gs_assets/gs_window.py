@@ -1,5 +1,5 @@
 import os
-import functools
+import functools # used for dynamically making buttons with scripts -- might take out
 import maya.cmds as cmds
 
 

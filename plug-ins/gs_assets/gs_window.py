@@ -21,7 +21,9 @@ class GrindstoneWindow:
     
     def __init__(self):
         
-        scriptsPath = 'C:/Users/adamsse/Documents/maya/2018/plug-ins/gs_assets/gs_scripts'
+        scriptsPath = 'D:/Documents/maya/2018/plug-ins/gs_assets/gs_scripts'
+        
+        self.pipelineStages = []
         
         for fn in os.listdir(scriptsPath):
             stage = SL.ScriptList(fn)
@@ -67,6 +69,8 @@ class GrindstoneWindow:
         
         # reset the runTests flag to 0
         self.runTests = 0
+		
+        pipelineStages = []
         
     
         # Now create a fresh UI window
@@ -89,9 +93,9 @@ class GrindstoneWindow:
         '''cmds.checkBox(label='Run Tests', align='center', onCommand=lambda *args: self.toggleX(), offCommand=lambda *args: self.toggleX())
         cmds.button(label='RUN', command=lambda *args: self.runScripts())'''
         
-        
         for i in range(0, len(self.pipelineStages)):
-            cmds.checkBox(label=self.pipelineStages[i].name, align='center', changeCommand=functools.partial(lambda i, *args: self.pipelineStages[i].check() , i))
+            #cmds.deleteUI(pipelineStages[i].name)
+            cmds.checkBox(label=self.pipelineStages[i].name, value = self.pipelineStages[i].isChecked, align='center', changeCommand=functools.partial(lambda i, *args: self.pipelineStages[i].check() , i))
         
         cmds.button(label='RUN', command=lambda *args: self.runScripts())
 

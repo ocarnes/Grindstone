@@ -1,9 +1,9 @@
-import sys
+import os
 import maya.api.OpenMaya as OpenMaya
 import gs_assets.gs_window as gs_win
 import gs_assets.gs_shelf_button_gen as sbg
 
-
+gs_path = os.path.dirname(os.path.realpath(gs_win.__file__))
 
 ##########################################################
 # Plug-in 
@@ -56,7 +56,7 @@ def initializePlugin( mobject ):
     except:
         sys.stderr.write( 'Failed to register command: ' + MyCommandClass.kPluginCmdName )
         
-    sbg.hiButton("Custom", MyCommandClass.kPluginCmdName)
+    sbg.hiButton("Custom", MyCommandClass.kPluginCmdName, gs_path)
 
 def uninitializePlugin( mobject ):
     # uninitialize the plug-in when Maya un-loads it.

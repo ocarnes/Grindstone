@@ -3,14 +3,16 @@
 import maya.cmds as cmds
 import maya.mel as mel
 
+theIcon = '/GS_icon_sm.png'
 
-def hiButton(theShelf, buttonCommand):
+
+def hiButton(theShelf, buttonCommand, srDir):
     cmds.setParent(theShelf)
     buttonTag = True
     shelfButton=cmds.shelfLayout(theShelf,q=1,ca=1)
 
     if shelfButton is None:	    
-        cmds.shelfButton(annotation="Print \"Hello\".", image1="commandButton.png", command="mel.eval(\"" + buttonCommand + "\")", label="helloButton")
+        cmds.shelfButton(annotation="Print \"Hello\".", image1=srDir + theIcon, command="mel.eval(\"" + buttonCommand + "\")", label="helloButton", scaleIcon=True)
         buttonTag = False
     else:
         for button in shelfButton:
@@ -20,7 +22,7 @@ def hiButton(theShelf, buttonCommand):
                 if "helloButton" == label:
                     buttonTag = False
     if buttonTag:
-        cmds.shelfButton(annotation="Print \"Hello\".", image1="commandButton.png", command="mel.eval(\"" + buttonCommand + "\")", label="helloButton")
+        cmds.shelfButton(annotation="Print \"Hello\".", image1=srDir + theIcon, command="mel.eval(\"" + buttonCommand + "\")", label="helloButton", scaleIcon=True)
 
 
 

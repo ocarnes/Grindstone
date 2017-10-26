@@ -3,6 +3,8 @@ import functools # used for dynamically making buttons with scripts -- might tak
 import maya.cmds as cmds
 import gs_ScriptList_class as SL
 
+gs_path = os.path.dirname(os.path.realpath(SL.__file__))
+gs_scr = '/gs_scripts'
 
 # **************************************************************************************************
 # GrindstoneWindow Class
@@ -21,7 +23,7 @@ class GrindstoneWindow:
     
     def __init__(self):
         
-        scriptsPath = 'D:/Documents/maya/2018/plug-ins/gs_assets/gs_scripts'
+        scriptsPath = gs_path + gs_scr
         
         self.pipelineStages = []
         

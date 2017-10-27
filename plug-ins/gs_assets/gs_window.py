@@ -95,18 +95,36 @@ class GrindstoneWindow:
     # creates the Grindstone window and exposes script functionality to the user
     def run(self):
         
+        # GUI Padding Var defined for quick changes
+        # Must be even due to pixel restraints
+        gsPad = 6
+        
         # Test to make sure that the UI isn't already active
         if cmds.window(self.winID, exists=True):
             cmds.deleteUI(self.winID)
         
     
         # Now create a fresh UI window
-        cmds.window(self.winID)
+        gsWindow = cmds.window(self.winID)
 
         # Add a Layout - a columnLayout stacks controls vertically
-        cmds.columnLayout()
+        #cmds.columnLayout()
+        
+        # Start up a form layout for dynamic sized components
+        gsFormat = cmds.formLayout(numberOfDivisions=100)
+        
+        # Add two columns to hold check boxes and the problem states
+        checkColumn = cmds.columnLayout(adjustableColumn=1, backgroundColor=(0.3529, 0.4667, 0.3255))
+        cmds.setParent('..')
+        stateColumn = cmds.columnLayout(adjustableColumn=1, backgroundColor=(0.4667, 0.3882, 0.4392))
+        
+        # Load columns into form layout
+        cmds.formLayout(gsFormat, edit=True, attachForm=[(checkColumn, 'top', gsPad), (checkColumn, 'bottom', gsPad), (checkColumn, 'left', gsPad), (stateColumn, 'top', gsPad), (stateColumn, 'bottom', gsPad), (stateColumn, 'right', gsPad)], attachPosition=[(checkColumn, 'right', gsPad/2, 25), (stateColumn, 'left', gsPad/2, 25)])
 
         # Add controls into this Layout
+
+        # Set the parent to the check holding column
+        cmds.setParent(checkColumn)
         
         # create check boxes for every script directory
         for i in range(0, len(self.pipelineStages)):

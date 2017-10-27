@@ -1,3 +1,9 @@
+# Grindstone gs_plugin.py
+# Authors: Sam Carnes and Sean Adams
+
+# This file registers the 'grindstone' command which passes control to a window provider.
+# It also creates a button to attach the command to on initialization, and deletes it on un-initialization.
+
 import os
 import maya.api.OpenMaya as OpenMaya
 import gs_assets.gs_window as gs_win

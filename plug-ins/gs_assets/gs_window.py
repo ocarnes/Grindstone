@@ -14,9 +14,12 @@ gs_path = os.path.dirname(os.path.realpath(SL.__file__))
 # extension to reach the gs_scripts directory from the current one
 gs_scr = '/gs_scripts'
 
+
+
 # **************************************************************************************************
 # GrindstoneWindow Class
 class GrindstoneWindow:
+    
     
     #********** DATA **********#
     

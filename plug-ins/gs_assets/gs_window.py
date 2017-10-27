@@ -29,6 +29,9 @@ class GrindstoneWindow:
     # an array to hold all of our scripts
     pipelineStages = []
     
+    # an array to hold the result entries of each script
+    rowArr = []
+    
     
     
     
@@ -42,6 +45,7 @@ class GrindstoneWindow:
         
         # clean up our data in case Maya still has it preserved in memory
         self.pipelineStages = []
+        self.rowArr = []
         
         # for every folder in the gs_scripts directory
         for fn in os.listdir(scriptsPath):
@@ -78,14 +82,29 @@ class GrindstoneWindow:
     #********** RUN SCRIPTS **********#
        
     # run all of the scripts that have been selected by the user
-    def runScripts(self):
+    def runScripts(self, destinationLayout):
         
         # for every folder of scripts in the pipelineStages array
         for stage in self.pipelineStages:
             
             # if the folder is checked, execute the checks
             if stage.isChecked:
-                stage.doChecks()
+                #stage.doChecks()
+                for script in stage.scripts:
+                    result = script.doCheck()
+                    self.showResult(result, destinationLayout)
+                    
+                    
+                                        
+          
+    #********** SHOW RESULTS **********#          
+                    
+    def showResult(self, result, destinationLayout):
+        tempVar = cmds.rowLayout(parent=destinationLayout,  numberOfColumns = 2)
+        self.rowArr.append(tempVar)
+        cmds.textField(text=result)
+        delInd = self.rowArr[len(self.rowArr)-1]
+        cmds.button(label='ignore', command=functools.partial(lambda delInd, *args: cmds.deleteUI(delInd), delInd))
                 
         
         
@@ -106,9 +125,6 @@ class GrindstoneWindow:
     
         # Now create a fresh UI window
         gsWindow = cmds.window(self.winID)
-
-        # Add a Layout - a columnLayout stacks controls vertically
-        #cmds.columnLayout()
         
         # Start up a form layout for dynamic sized components
         gsFormat = cmds.formLayout(numberOfDivisions=100)
@@ -121,7 +137,6 @@ class GrindstoneWindow:
         # Load columns into form layout
         cmds.formLayout(gsFormat, edit=True, attachForm=[(checkColumn, 'top', gsPad), (checkColumn, 'bottom', gsPad), (checkColumn, 'left', gsPad), (stateColumn, 'top', gsPad), (stateColumn, 'bottom', gsPad), (stateColumn, 'right', gsPad)], attachPosition=[(checkColumn, 'right', gsPad/2, 25), (stateColumn, 'left', gsPad/2, 25)])
 
-        # Add controls into this Layout
 
         # Set the parent to the check holding column
         cmds.setParent(checkColumn)
@@ -131,7 +146,7 @@ class GrindstoneWindow:
             cmds.checkBox(label=self.pipelineStages[i].name, value = self.pipelineStages[i].isChecked, align='center', changeCommand=functools.partial(lambda i, *args: self.pipelineStages[i].check() , i))
         
         # create button that will run the checked scripts
-        cmds.button(label='RUN', command=lambda *args: self.runScripts())
+        cmds.button(label='RUN', command=lambda *args: self.runScripts(stateColumn))
 
 
         # Display the window

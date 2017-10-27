@@ -7,6 +7,7 @@ class TestClassOne:
         
     def doCheck(self):
         print "1 check!"
+        return "1 check!"
         
         
 def getObject():

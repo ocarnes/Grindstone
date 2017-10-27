@@ -1,4 +1,7 @@
-# creates shelf button on plug-in load and destroys shelf button on plug-in un-load
+# Grindstone gs_shelf_button_gen.py
+# Authors: Sam Carnes and Sean Adams
+
+# This file creates a shelf button on plug-in load and destroys shelf button on plug-in un-load
 
 import maya.cmds as cmds
 import maya.mel as mel
@@ -6,6 +9,9 @@ import maya.mel as mel
 theIcon = '/GS_icon_sm.png'
 
 
+#********** HI BUTTON **********#
+
+# create shelf button
 def hiButton(theShelf, buttonCommand, srDir):
     cmds.setParent(theShelf)
     buttonTag = True
@@ -26,6 +32,9 @@ def hiButton(theShelf, buttonCommand, srDir):
 
 
 
+#********** BYE BUTTON **********#
+
+# destroy shelf button
 def byeButton(theShelf):
     shelfButtons=cmds.shelfLayout(theShelf, q=1, ca=1)
     for button in shelfButtons:

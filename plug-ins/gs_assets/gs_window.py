@@ -45,6 +45,9 @@ class GrindstoneWindow:
         
         # clean up our data in case Maya still has it preserved in memory
         self.pipelineStages = []
+        
+        for row in self.rowArr:
+            cmds.deleteUI(row)
         self.rowArr = []
         
         # for every folder in the gs_scripts directory
@@ -84,6 +87,17 @@ class GrindstoneWindow:
     # run all of the scripts that have been selected by the user
     def runScripts(self, destinationLayout):
         
+        # clear out previous results
+        for row in self.rowArr:
+            try:
+                cmds.deleteUI(row)
+                
+            except:
+                print "Window closed with stuff in rowArr"
+            
+        self.rowArr = []
+        
+        
         # for every folder of scripts in the pipelineStages array
         for stage in self.pipelineStages:
             
@@ -97,15 +111,26 @@ class GrindstoneWindow:
                     
                                         
           
-    #********** SHOW RESULTS **********#          
-                    
+    #********** SHOW RESULT **********#          
+    
+    # adds a result entry                
     def showResult(self, result, destinationLayout):
         tempVar = cmds.rowLayout(parent=destinationLayout,  numberOfColumns = 2)
         self.rowArr.append(tempVar)
-        cmds.textField(text=result)
+        cmds.textField(text=result, editable=False)
         delInd = self.rowArr[len(self.rowArr)-1]
-        cmds.button(label='ignore', command=functools.partial(lambda delInd, *args: cmds.deleteUI(delInd), delInd))
+        #cmds.button(label='ignore', command=functools.partial(lambda delInd, *args: cmds.deleteUI(delInd), delInd))
+        cmds.button(label='ignore', command=functools.partial(lambda delInd, *args: self.removeResult(delInd), delInd))
                 
+                
+           
+           
+    #********** REMOVE RESULT **********#         
+          
+    # removes a result entry      
+    def removeResult(self, index):
+        cmds.deleteUI(index)
+        self.rowArr.remove(index)
         
         
         

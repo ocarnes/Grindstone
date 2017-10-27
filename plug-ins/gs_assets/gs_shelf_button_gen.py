@@ -8,6 +8,10 @@ import maya.mel as mel
 
 theIcon = '/GS_icon_sm.png'
 
+buttonLabel = 'gsButton'
+
+buttonAnnotation = 'Grindstone'
+
 
 #********** HI BUTTON **********#
 
@@ -18,17 +22,17 @@ def hiButton(theShelf, buttonCommand, srDir):
     shelfButton=cmds.shelfLayout(theShelf,q=1,ca=1)
 
     if shelfButton is None:	    
-        cmds.shelfButton(annotation="Print \"Hello\".", image1=srDir + theIcon, command="mel.eval(\"" + buttonCommand + "\")", label="helloButton", scaleIcon=True)
+        cmds.shelfButton(annotation=buttonAnnotation, image1=srDir + theIcon, command="mel.eval(\"" + buttonCommand + "\")", label=buttonLabel, scaleIcon=True)
         buttonTag = False
     else:
         for button in shelfButton:
             label = ""
             if cmds.objectTypeUI(button, isType="shelfButton"):
                 label=str(cmds.shelfButton(button, q=1, label=1))
-                if "helloButton" == label:
+                if buttonLabel == label:
                     buttonTag = False
     if buttonTag:
-        cmds.shelfButton(annotation="Print \"Hello\".", image1=srDir + theIcon, command="mel.eval(\"" + buttonCommand + "\")", label="helloButton", scaleIcon=True)
+        cmds.shelfButton(annotation=buttonAnnotation, image1=srDir + theIcon, command="mel.eval(\"" + buttonCommand + "\")", label=buttonLabel, scaleIcon=True)
 
 
 
@@ -44,5 +48,5 @@ def byeButton(theShelf):
             label=str(cmds.shelfButton(button, q=1, label=1))
             # If this button has the label we're looking for, 
             # delete the button. 
-            if "helloButton" == label:
+            if buttonLabel == label:
                 cmds.deleteUI(button)

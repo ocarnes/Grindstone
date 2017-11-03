@@ -116,7 +116,7 @@ lower case with underscores
 	
 	
 	
-#********************************************* Functions *********************************************#
+#********************************************* Comments *********************************************#
 
 Every function must have a commented tag above it that distinguishes where that function starts
 

@@ -1,3 +1,5 @@
+import maya.cmds as cmds
+
 class CameraCount:
     
     
@@ -6,8 +8,16 @@ class CameraCount:
        
         
     def doCheck(self):
-        print "3 check!"
-        return "3 check!"
+        
+        # get the list of cameras
+        cameraList = cmds.listCameras()
+        
+        if len(cameraList) > 4:
+            returnString = str(len(cameraList)) + " cameras detected, should have 4."
+            return returnString
+            
+        else:
+            return ''
         
         
 def getObject():

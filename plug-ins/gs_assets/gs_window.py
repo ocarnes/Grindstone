@@ -115,11 +115,12 @@ class GrindstoneWindow:
     
     # adds a result entry                
     def showResult(self, result, destinationLayout):
-        tempVar = cmds.rowLayout(parent=destinationLayout,  numberOfColumns = 2)
-        self.rowArr.append(tempVar)
-        cmds.textField(text=result, editable=False)
-        delInd = self.rowArr[len(self.rowArr)-1]
-        cmds.button(label='ignore', command=functools.partial(lambda delInd, *args: self.removeResult(delInd), delInd))
+        if result != '':
+            tempVar = cmds.rowLayout(parent=destinationLayout,  numberOfColumns = 2)
+            self.rowArr.append(tempVar)
+            cmds.textField(text=result, editable=False, width=500)
+            delInd = self.rowArr[len(self.rowArr)-1]
+            cmds.button(label='ignore', command=functools.partial(lambda delInd, *args: self.removeResult(delInd), delInd))
                 
                 
            

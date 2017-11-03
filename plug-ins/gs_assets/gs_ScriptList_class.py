@@ -34,12 +34,3 @@ class ScriptList:
             
         else:
             self.isChecked = 1
-            
-            
-            
-    #********** DO CHECKS **********# DEPRECATED
-            
-    # executes every script in the scripts array
-    def doChecks(self):
-        for s in self.scripts:
-            s.doCheck()

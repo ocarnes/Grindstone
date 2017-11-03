@@ -103,7 +103,6 @@ class GrindstoneWindow:
             
             # if the folder is checked, execute the checks
             if stage.isChecked:
-                #stage.doChecks()
                 for script in stage.scripts:
                     result = script.doCheck()
                     self.showResult(result, destinationLayout)

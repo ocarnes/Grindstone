@@ -155,9 +155,9 @@ class GrindstoneWindow:
         gsFormat = cmds.formLayout(numberOfDivisions=100)
         
         # Add two columns to hold check boxes and the problem states
-        checkColumn = cmds.columnLayout(adjustableColumn=1, backgroundColor=(0.3529, 0.4667, 0.3255))
+        checkColumn = cmds.columnLayout(adjustableColumn=1, backgroundColor=(0.2157, 0.2157, 0.2157))
         cmds.setParent('..')
-        stateColumn = cmds.columnLayout(adjustableColumn=1, backgroundColor=(0.4667, 0.3882, 0.4392))
+        stateColumn = cmds.columnLayout(adjustableColumn=1, backgroundColor=(0.3157, 0.3157, 0.3157))
         
         # Load columns into form layout
         cmds.formLayout(gsFormat, edit=True, attachForm=[(checkColumn, 'top', gsPad), (checkColumn, 'bottom', gsPad), (checkColumn, 'left', gsPad), (stateColumn, 'top', gsPad), (stateColumn, 'bottom', gsPad), (stateColumn, 'right', gsPad)], attachPosition=[(checkColumn, 'right', gsPad/2, 25), (stateColumn, 'left', gsPad/2, 25)])
@@ -171,7 +171,7 @@ class GrindstoneWindow:
             cmds.checkBox(label=self.pipelineStages[i].name, value = self.pipelineStages[i].isChecked, align='center', changeCommand=functools.partial(lambda i, *args: self.pipelineStages[i].check() , i))
         
         # create button that will run the checked scripts
-        cmds.button(label='RUN', command=lambda *args: self.runScripts(stateColumn))
+        cmds.button(label='RUN', command=lambda *args: self.runScripts(stateColumn), backgroundColor=(0.3647, 0.3647, 0.3647))
 
 
         # Display the window

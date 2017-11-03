@@ -37,7 +37,7 @@ class ScriptList:
             
             
             
-    #********** DO CHECKS **********#
+    #********** DO CHECKS **********# DEPRECATED
             
     # executes every script in the scripts array
     def doChecks(self):

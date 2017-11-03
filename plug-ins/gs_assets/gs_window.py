@@ -119,7 +119,6 @@ class GrindstoneWindow:
         self.rowArr.append(tempVar)
         cmds.textField(text=result, editable=False)
         delInd = self.rowArr[len(self.rowArr)-1]
-        #cmds.button(label='ignore', command=functools.partial(lambda delInd, *args: cmds.deleteUI(delInd), delInd))
         cmds.button(label='ignore', command=functools.partial(lambda delInd, *args: self.removeResult(delInd), delInd))
                 
                 

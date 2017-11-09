@@ -2,11 +2,10 @@ class TestClassOne:
     
     
     def __init__(self):
-        pass
+        self.hasFix = False
        
         
     def doCheck(self):
-        print "1 check!"
         return "1 check!"
         
         

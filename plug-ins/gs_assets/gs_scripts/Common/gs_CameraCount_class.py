@@ -10,7 +10,7 @@ class CameraCount:
     
     
     def __init__(self):
-        pass
+        self.hasFix = True
        
         
     def doCheck(self):
@@ -24,6 +24,10 @@ class CameraCount:
             
         else:
             return ''
+            
+            
+    def runFix(self):
+        return "Camera fix!"
         
         
 def getObject():

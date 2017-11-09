@@ -10,7 +10,7 @@ class FileTypeMA:
     
     
     def __init__(self):
-        pass
+        self.hasFix = False
        
         
     def doCheck(self):

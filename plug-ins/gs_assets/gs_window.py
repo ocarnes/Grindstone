@@ -105,7 +105,7 @@ class GrindstoneWindow:
             if stage.isChecked:
                 for script in stage.scripts:
                     result = script.doCheck()
-                    self.showResult(result, destinationLayout)
+                    self.showResult(result, destinationLayout, script)
                     
                     
                                         
@@ -113,15 +113,45 @@ class GrindstoneWindow:
     #********** SHOW RESULT **********#          
     
     # adds a result entry                
-    def showResult(self, result, destinationLayout):
+    def showResult(self, result, destinationLayout, script):
         if result != '':
-            tempVar = cmds.rowLayout(parent=destinationLayout,  numberOfColumns = 2)
+            
+            if script.hasFix:
+                columnCount = 3
+                
+            else:
+                columnCount = 2
+            
+            tempVar = cmds.rowLayout(parent=destinationLayout,  numberOfColumns = columnCount)
             self.rowArr.append(tempVar)
             cmds.textField(text=result, editable=False, width=500)
             delInd = self.rowArr[len(self.rowArr)-1]
-            cmds.button(label='ignore', command=functools.partial(lambda delInd, *args: self.removeResult(delInd), delInd))
+            cmds.button(label='Ignore', command=functools.partial(lambda delInd, *args: self.removeResult(delInd), delInd))
+            
+            if script.hasFix:
+                cmds.button(label='Auto Fix', command=functools.partial(lambda delInd, script, destinationLayout, *args: self.executeFix(delInd, script, destinationLayout), delInd, script, destinationLayout))
                 
                 
+                
+                
+    #********** EXECUTE FIX **********#          
+    
+    # executes an auto fix              
+    def executeFix(self, delInd, script, destinationLayout):
+        fixResult = script.runFix()
+        
+        children = cmds.rowLayout(delInd, query=True, childArray=True) 
+        
+        # change the text field to reflect the fix result
+        cmds.textField(children[0], edit=True, text=fixResult)
+        
+        # change the ignore button to be an acknowledgement of the fix result
+        cmds.button(children[1], edit=True, label='Ok')
+                
+        # delete the auto-fix button
+        cmds.deleteUI(children[2])
+           
+           
            
            
     #********** REMOVE RESULT **********#         

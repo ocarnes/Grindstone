@@ -129,7 +129,7 @@ class GrindstoneWindow:
             cmds.button(label='Ignore', command=functools.partial(lambda delInd, *args: self.removeResult(delInd), delInd))
             
             if script.hasFix:
-                cmds.button(label='Auto Fix', command=functools.partial(lambda delInd, script, destinationLayout, *args: self.executeFix(delInd, script, destinationLayout), delInd, script, destinationLayout))
+                cmds.button(label=script.fixLabel, command=functools.partial(lambda delInd, script, destinationLayout, *args: self.executeFix(delInd, script, destinationLayout), delInd, script, destinationLayout))
                 
                 
                 

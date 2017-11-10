@@ -9,9 +9,16 @@ import maya.cmds as cmds
 class FileTypeMA:
     
     
+    #********** INIT **********#
+    
     def __init__(self):
+        
+        # identify whether or not the script has an auto-fix function
         self.hasFix = False
        
+        
+        
+    #********** DO CHECK **********#
         
     def doCheck(self):
         
@@ -26,6 +33,9 @@ class FileTypeMA:
             
             return returnString
         
+        
+        
+#********** RETURN INSTANCE OF SCRIPT CLASS **********#
         
 def getObject():
     return FileTypeMA()

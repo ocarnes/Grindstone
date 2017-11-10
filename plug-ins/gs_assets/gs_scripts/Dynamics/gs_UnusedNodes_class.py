@@ -1,3 +1,3 @@
 select `ls -type unknown`;
-lock -unlock;
-delete selection;
+lockNode -lock false;
+delete;

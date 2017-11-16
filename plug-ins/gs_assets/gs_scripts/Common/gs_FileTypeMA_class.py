@@ -15,6 +15,10 @@ class FileTypeMA:
         
         # identify whether or not the script has an auto-fix function
         self.hasFix = False
+        
+        # provides a label for the button that executes the auto-fix
+        # NO MORE THAN 20 CHARACTERS
+        self.fixLabel = ""
        
         
         

@@ -146,7 +146,7 @@ class GrindstoneWindow:
         cmds.textField(children[0], edit=True, text=fixResult)
         
         # change the ignore button to be an acknowledgement of the fix result
-        cmds.button(children[1], edit=True, label='Ok')
+        cmds.button(children[1], edit=True, label='Dismiss')
                 
         # delete the auto-fix button
         cmds.deleteUI(children[2])

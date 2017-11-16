@@ -39,14 +39,15 @@ class QuadScan:
 
         oldHold = cmds.ls(selection = True)
 
-        cmds.selectMode(co =True)
-
         # Creating lists of all geometry in the scene and then all of its faces
         polyHold = cmds.ls(geometry=True)
         faceHold= cmds.polyListComponentConversion(polyHold, tf=True)
+        
+        # Saving the current selection state and hilite for restoration following execution
+        userHil = cmds.ls(hilite = True)
+        userSel = cmds.ls(selection = True)
 
         # Setting the selection type to look for faces and selecting them
-        cmds.selectType(polymeshFace = True)
         cmds.select(faceHold)
 
         # Contraining the selection to triangles and storing the results
@@ -64,7 +65,8 @@ class QuadScan:
         nGonHold = cmds.ls(sl = 1)
         nGonLim = len(nGonHold)
 
-        cmds.polySelectConstraint(sz = 0)
+        cmds.polySelectConstraint(disable = True)
+        cmds.select(clear = True)
 
         # Iterating through the results to count the amount of faces found
         for i in range(0, triLim):
@@ -84,14 +86,10 @@ class QuadScan:
             nGonCount += cmds.polyEvaluate(nGonHold[i], faceComponent = True)
 
 
-        cmds.select(clear = True)
-        cmds.selectMode(co = False)
-        cmds.select(oldHold)
-        
-        '''cmds.select(nGonHold)
-        print triHold
-        print quadHold
-        print nGonHold'''
+        cmds.selectType(allObjects = True)
+        cmds.hilite(userHil)
+        cmds.select(userSel)
+
         print triHold
         print triCount
 

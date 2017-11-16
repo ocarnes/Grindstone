@@ -12,11 +12,16 @@ class QuadScan:
     def __init__(self):
         
         # identify whether or not the script has an auto-fix function
-        self.hasFix = False
+        self.hasFix = True
         
         # provides a label for the button that executes the auto-fix
         # NO MORE THAN 20 CHARACTERS
         self.fixLabel = "Select non-quads"
+        
+        # Vars for tracking and referencing the different polygons
+        self.triHold = []
+        self.quadHold = []
+        self.nGonHold = []
     
     
     
@@ -25,9 +30,14 @@ class QuadScan:
     def doCheck(self):
         
         # Setting up vars for tracking and managing the faces found
-        triHold = []
-        quadHold = []
-        nGonHold = []
+        self.triHold = []
+        self.quadHold = []
+        self.nGonHold = []
+        
+        triRep = ''
+        nGonRep = ''
+        dualFind = ''
+        perPoint = ''
 
         triCount = 0
         quadCount = 0
@@ -37,72 +47,71 @@ class QuadScan:
         quadLim = 0
         nGonLim = 0
 
-        oldHold = cmds.ls(selection = True)
-
-        cmds.selectMode(co =True)
-
         # Creating lists of all geometry in the scene and then all of its faces
         polyHold = cmds.ls(geometry=True)
         faceHold= cmds.polyListComponentConversion(polyHold, tf=True)
+        
+        # Saving the current selection state and hilite for restoration following execution
+        userHil = cmds.ls(hilite = True)
+        userSel = cmds.ls(selection = True)
 
         # Setting the selection type to look for faces and selecting them
-        cmds.selectType(polymeshFace = True)
         cmds.select(faceHold)
 
         # Contraining the selection to triangles and storing the results
         cmds.polySelectConstraint(m = 3, t = 8, sz = 1)
-        triHold = cmds.ls(sl=1)
-        triLim = len(triHold)
+        self.triHold = cmds.ls(sl=1)
+        triLim = len(self.triHold)
 
         # Quadrilateral constraint
         cmds.polySelectConstraint(m = 3, t = 8, sz = 2)
-        quadHold = cmds.ls(sl = 1)
-        quadLim = len(quadHold)
+        self.quadHold = cmds.ls(sl = 1)
+        quadLim = len(self.quadHold)
 
         # N_Gon constraint
         cmds.polySelectConstraint(m = 3, t = 8, sz = 3)
-        nGonHold = cmds.ls(sl = 1)
-        nGonLim = len(nGonHold)
+        self.nGonHold = cmds.ls(sl = 1)
+        nGonLim = len(self.nGonHold)
 
-        cmds.polySelectConstraint(sz = 0)
+        cmds.polySelectConstraint(disable = True)
+        cmds.select(clear = True)
 
         # Iterating through the results to count the amount of faces found
         for i in range(0, triLim):
-            cmds.select(triHold[i])
-            triCount += cmds.polyEvaluate(triHold[i], faceComponent = True)
+            cmds.select(self.triHold[i])
+            triCount += cmds.polyEvaluate(self.triHold[i], faceComponent = True)
 
         # Iterating through the results to count the amount of faces found
         for i in range(0, quadLim):
-            cmds.select(quadHold[i])
-            quadCount += cmds.polyEvaluate(quadHold[i], faceComponent = True)
+            cmds.select(self.quadHold[i])
+            quadCount += cmds.polyEvaluate(self.quadHold[i], faceComponent = True)
 
 
 
         # Iterating through the results to count the amount of faces found
         for i in range(0, nGonLim):
-            cmds.select(nGonHold[i])
-            nGonCount += cmds.polyEvaluate(nGonHold[i], faceComponent = True)
+            cmds.select(self.nGonHold[i])
+            nGonCount += cmds.polyEvaluate(self.nGonHold[i], faceComponent = True)
 
 
-        cmds.select(clear = True)
-        cmds.selectMode(co = False)
-        cmds.select(oldHold)
-        
-        '''cmds.select(nGonHold)
-        print triHold
-        print quadHold
-        print nGonHold'''
-        print triHold
-        print triCount
+        cmds.selectType(allObjects = True)
+        cmds.hilite(userHil)
+        cmds.select(userSel)
 
-        print quadHold
-        print quadCount
+        if self.triHold:
+            triRep = '%d triangles found'%(triCount)
+            perPoint = '.'
 
-        print nGonHold
-        print nGonCount
+        if self.nGonHold:
+            nGonRep = '%d n-gons found'%(nGonCount)
+            perPoint = '.'
         
-        
-        
+        if self.triHold and self.nGonHold:
+            dualFind = ' and '
+            
+        return (triRep + dualFind + nGonRep + perPoint)
+
+
     #********** RUN FIX **********#
     
     # selects all non-quad faces
@@ -110,14 +119,13 @@ class QuadScan:
         
         try:
             
-            # delete non-deformer history
-            cmds.bakePartialHistory(allShapes=True, prePostDeformers=True)
-            
-            return "Non-deformer history deleted."
+            # Highlight the non quadrilateral polygons
+            cmds.select(self.triHold + self.nGonHold)
+            return "Non-quadrilaterals highlighted."
             
         except:
             
-            return "There was a problem deleteing non-deformer history."
+            return "There was a problem selecting the polygons."
             
 
 

@@ -64,7 +64,7 @@ class UnusedNodes:
             for node in unknownNodes:
                 cmds.lockNode( node, lock=False )
                 cmds.delete( node )
-                deletedNodes++
+                deletedNodes+=1
             
             
             # determine if there "was an unknown node" or "were unknown nodes"

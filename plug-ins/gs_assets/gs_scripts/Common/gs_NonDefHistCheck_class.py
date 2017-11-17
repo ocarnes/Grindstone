@@ -35,11 +35,11 @@ class NonDefHistCheck:
         nonDefTag = ''
         
         for someObj in sceneSel:
-            nonDefChk = [n for n in sceneSel[objInd].history(il=1,pdo=True) if not isinstance(n, pm.nodetypes.GeometryFilter)]
+            nonDefChk = [n for n in sceneSel[objInd].history(il=1,pdo=True) if not isinstance(n, pm.nodetypes.GeometryFilter)] and not cmds.referenceQuery(query=True, isNodeReferenced=True)
             objInd += 1
             
             if nonDefChk:
-                nonDefTag = 'Non-Deformer History detected.'
+                nonDefTag = 'Non-Deformer history detected.'
                 break
         
         return nonDefTag

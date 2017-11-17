@@ -61,7 +61,7 @@ class UnusedNodes:
         try:
             
             # for all the unknown nodes, unlock and delete them
-            for node in unknownNodes:
+            for node in self.unknownNodes:
                 cmds.lockNode( node, lock=False )
                 cmds.delete( node )
                 deletedNodes+=1

@@ -1,4 +1,10 @@
- import maya.cmds as cmds
+# Grindstone gs_UVDetect_class.py
+# Authors: Sam Carnes and Sean Adams
+
+# This file defines a script that makes sure all geometry has UVs
+
+
+import maya.cmds as cmds
 
 class UVDetect:
     

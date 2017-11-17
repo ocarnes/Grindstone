@@ -35,7 +35,7 @@ class NonDefHistCheck:
         nonDefTag = ''
         
         for someObj in sceneSel:
-            nonDefChk = [n for n in sceneSel[objInd].history(il=1,pdo=True) if not isinstance(n, pm.nodetypes.GeometryFilter)] and not cmds.referenceQuery(query=True, isNodeReferenced=True)
+            nonDefChk = [n for n in sceneSel[objInd].history(il=1,pdo=True) if not isinstance(n, pm.nodetypes.GeometryFilter)] #and not cmds.referenceQuery(n, isNodeReferenced=True)
             objInd += 1
             
             if nonDefChk:

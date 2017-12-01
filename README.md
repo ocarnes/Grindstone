@@ -107,7 +107,10 @@ Grindstone's production code is located at `P:/apps/maya/common/DACTools/Grindst
 ******************************************************************************
 
 ### Adding Scripts
-To add a new script to Grindstone, start by downloading the [script template](references/gs_template.py).
+These steps outline the process of adding scripts to Grindstone:
+- To add a new script to Grindstone, start by downloading the [script template](references/gs_template.py). Save template as a new script class file, keeping in mind the [Grindstone naming conventions](references/Grindstone_Naming_Conventions.txt). The name should reflect the error that the new script checks for, and each script should check for only a single error. 
+- Place your new script file in one of the category folders, or [create a new category](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories). 
+- Next, go through the template code and follow the instructions in every block comment. When you have completed the tasks outlined in each block comment, your new script will be automatically imported into Grindstone. Your `doCheck()` function will be run when the category is executed, and your `runFix()` function (if you implemented one) will be attached to the auto-fix button that accompanies your script's error report.
 
 ******************************************************************************
 

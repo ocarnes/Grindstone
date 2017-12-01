@@ -3,12 +3,13 @@
 
 
 ### Contents
-
+- [Overview](https://github.com/sadams115/Grindstone/blob/master/README.md#overview)
+- [Using Grindstone]
 
 ### Overview
 
 
-### Using Grindstone from the Maya Interface
+## Using Grindstone
 
 
 ### Adding Scripts

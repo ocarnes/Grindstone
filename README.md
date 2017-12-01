@@ -36,6 +36,7 @@ contains several scripts that address most of the initial set of errors identifi
 ## Using Grindstone
 
 ### How To Access Grindstone In Maya
+The production version of Grindstone is automatically loaded into Maya on startup. You can summon the Grindstone interface through a button on the Custom shelf.
 
 ### The Grindstone Interface
 

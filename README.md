@@ -107,6 +107,7 @@ Grindstone's production code is located at `P:/apps/maya/common/DACTools/Grindst
 ******************************************************************************
 
 ### Adding Scripts
+To add a new script to Grindstone, start by downloading the [script template](references/gs_template.py).
 
 ******************************************************************************
 

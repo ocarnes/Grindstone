@@ -57,7 +57,7 @@ Each entry in the error list will be accomanied by up to two response options. T
 
 ### The Categories
 
-#### Common
+#### **Common**
 
 ##### File Type MA
 This script checks to see if your file is a Maya Ascii file. There is no auto-fix for this check.
@@ -68,9 +68,9 @@ This script checks to see if your file has any non-deformer history. The auto-fi
 ##### Non-Local File Paths
 This script checks for any non-local file paths in your file. There is no auto-fix for this check.
 
-#### Dynamics
+#### **Dynamics**
 
-#### Modeling
+#### **Modeling**
 
 
 

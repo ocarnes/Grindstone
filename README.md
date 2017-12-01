@@ -10,13 +10,13 @@
 - [Using Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#using-grindstone)
   - [How to Access Grindstone In Maya](https://github.com/sadams115/Grindstone/blob/master/README.md#how-to-access-grindstone-in-maya)
   - [The Grindstone Interface](https://github.com/sadams115/Grindstone/blob/master/README.md#the-grindstone-interface)
-    - Running Checks
-    - Responding to Errors
+    - [Running Checks](https://github.com/sadams115/Grindstone/blob/master/README.md#running-checks)
+    - [Responding to Errors](https://github.com/sadams115/Grindstone/blob/master/README.md#responding-to-errors)
   - [The Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories)
-    - Common
-    - Dynamics
-    - Enumeration
-    - Modeling
+    - [Common](https://github.com/sadams115/Grindstone/blob/master/README.md#common)
+    - [Dynamics](https://github.com/sadams115/Grindstone/blob/master/README.md#dynamics)
+    - [Enumeration](https://github.com/sadams115/Grindstone/blob/master/README.md#enumeration)
+    - [Modeling](https://github.com/sadams115/Grindstone/blob/master/README.md#modeling)
 - [Expanding Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#expanding-grindstone)
   - [Grindstone Location](https://github.com/sadams115/Grindstone/blob/master/README.md#grindstone-location)
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)

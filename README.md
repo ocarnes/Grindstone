@@ -15,6 +15,7 @@
   - [The Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories)
     - Common
     - Dynamics
+    - Enumeration
     - Modeling
 - [Expanding Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#expanding-grindstone)
   - [Grindstone Location](https://github.com/sadams115/Grindstone/blob/master/README.md#grindstone-location)

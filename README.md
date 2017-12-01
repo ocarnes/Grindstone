@@ -4,12 +4,16 @@
 
 ### Contents
 - [Overview](https://github.com/sadams115/Grindstone/blob/master/README.md#overview)
-- [Using Grindstone]
+- [Using Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#using-grindstone)
+- [Expanding Grindstone]()
 
 ### Overview
 
 
 ## Using Grindstone
+
+
+## Expanding Grindstone
 
 
 ### Adding Scripts

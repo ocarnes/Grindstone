@@ -1,6 +1,8 @@
 '''
 ********************************************
 
+Add the following in comments to the top of the file:
+
 File name -- be sure to check the naming conventions in the Grindstone documentation
 Author(s)
 Brief description of what this script does

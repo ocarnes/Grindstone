@@ -10,6 +10,9 @@
     - Running Checks
     - Responding to Errors
   - [The Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories)
+    - Common
+    - Dynamics
+    - Modeling
 - [Expanding Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#expanding-grindstone)
   - [Grindstone Location](https://github.com/sadams115/Grindstone/blob/master/README.md#grindstone-location)
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)
@@ -42,6 +45,7 @@ contains several scripts that address most of the initial set of errors identifi
 ### How to Access Grindstone In Maya
 The production version of Grindstone is automatically loaded into Maya on startup. You can summon the Grindstone interface through a [button](plug-ins/gs_assets/GS_icon.png) on the Custom shelf.
 
+
 ### The Grindstone Interface
 
 #### Running Checks
@@ -50,16 +54,28 @@ To the left of the Grindstone interface are several checkboxes and a "Run" butto
 #### Responding to Errors
 Each entry in the error list will be accomanied by up to two response options. The first is to ignore the error in the event that there is no auto-fix available or you want to address the issue manually. Errors with an available auto-fix will include a second option to execute that auto-fix. The text on the auto-fix button itself briefly describes what the auto-fix will do. A detailed list of available auto-fixes and exactly what they do can be found [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories).
 
+
 ### The Categories
+
+#### Common
+
+#### Dynamics
+
+#### Modeling
+
+
 
 
 ## Expanding Grindstone
 
 ### Grindstone Location
 
+
 ### Adding Scripts
 
+
 ### Adding Categories
+
 
 ### Naming Conventions
 A full guide to Grindstone conventions can be found [here](references/Grindstone_Naming_Conventions.txt).

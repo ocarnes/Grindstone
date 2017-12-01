@@ -79,7 +79,22 @@ This script checks for any non-local file paths in your file. There is no auto-f
 
 #### **Dynamics**
 
+###### Unused Nodes
+This script checks for any unused/unknown nodes in your file. The auto-fix for this script will unlock and delete all unused nodes in the file.
+
 #### **Modeling**
+
+###### Camera Count
+This script ensures that only the four default cameras are present in your scene. The auto-fix will delete any additional cameras in the scene.
+
+###### Frozen Transforms
+This script will check that the transforms are frozen in the scene. The auto-fix freezes transforms for you.
+
+###### Non-Quads
+This script scans for non-quadrilateral geometry in your scene such as triangles or n-gons. The auto-fix will highlight all non-quads in your scene.
+
+###### UVs
+This script will make sure that all geometry has a UV map. There is no auto-fix for this script.
 
 ******************************************************************************
 ******************************************************************************

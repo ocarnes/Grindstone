@@ -67,33 +67,44 @@ Each entry in the error list will be accomanied by up to two response options. T
 ### The Categories
 
 #### **Common**
+===============================================================================
 
 ###### File Type MA
+--------------------------------------------------------------------------------
 This script checks to see if your file is a Maya Ascii file. There is no auto-fix for this check.
 
 ###### Non-Deformer History
+--------------------------------------------------------------------------------
 This script checks to see if your file has any non-deformer history. The auto-fix for this script simply deletes any non-deformer history.
 
 ###### Non-Local File Paths
+--------------------------------------------------------------------------------
 This script checks for any non-local file paths in your file. There is no auto-fix for this check.
 
 #### **Dynamics**
+===============================================================================
 
 ###### Unused Nodes
+--------------------------------------------------------------------------------
 This script checks for any unused/unknown nodes in your file. The auto-fix for this script will unlock and delete all unused nodes in the file.
 
 #### **Modeling**
+===============================================================================
 
 ###### Camera Count
+--------------------------------------------------------------------------------
 This script ensures that only the four default cameras are present in your scene. The auto-fix will delete any additional cameras in the scene.
 
 ###### Frozen Transforms
+--------------------------------------------------------------------------------
 This script will check that the transforms are frozen in the scene. The auto-fix freezes transforms for you.
 
 ###### Non-Quads
+--------------------------------------------------------------------------------
 This script scans for non-quadrilateral geometry in your scene such as triangles or n-gons. The auto-fix will highlight all non-quads in your scene.
 
 ###### UVs
+--------------------------------------------------------------------------------
 This script will make sure that all geometry has a UV map. There is no auto-fix for this script.
 
 ******************************************************************************

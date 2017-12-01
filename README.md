@@ -11,6 +11,7 @@
   - [Grindstone Location](https://github.com/sadams115/Grindstone/blob/master/README.md#grindstone-location)
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)
   - [Adding Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories)
+  - [Naming Conventions]()
 
 ## Overview
 &nbsp;&nbsp;&nbsp;&nbsp;Grindstone is a plug-in for the Maya 3D modeling software that will help streamline a team- based 
@@ -48,3 +49,6 @@ The production version of Grindstone is automatically loaded into Maya on startu
 ### Adding Scripts
 
 ### Adding Categories
+
+### Naming Conventions
+A full guide to Grindstone conventions can be found [here](references/Grindstone_Naming_Conventions.txt).

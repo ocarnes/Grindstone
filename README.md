@@ -5,8 +5,10 @@
 ### Contents
 - [Overview](https://github.com/sadams115/Grindstone/blob/master/README.md#overview)
 - [Using Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#using-grindstone)
-  - [How To Access Grindstone In Maya](https://github.com/sadams115/Grindstone/blob/master/README.md#how-to-access-grindstone-in-maya)
+  - [How to Access Grindstone In Maya](https://github.com/sadams115/Grindstone/blob/master/README.md#how-to-access-grindstone-in-maya)
   - [The Grindstone Interface](https://github.com/sadams115/Grindstone/blob/master/README.md#the-grindstone-interface)
+    - [Running Checks]()
+    - [Responding to Errors]()
 - [Expanding Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#expanding-grindstone)
   - [Grindstone Location](https://github.com/sadams115/Grindstone/blob/master/README.md#grindstone-location)
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)
@@ -36,10 +38,14 @@ contains several scripts that address most of the initial set of errors identifi
 
 ## Using Grindstone
 
-### How To Access Grindstone In Maya
+### How to Access Grindstone In Maya
 The production version of Grindstone is automatically loaded into Maya on startup. You can summon the Grindstone interface through a [button](plug-ins/gs_assets/GS_icon.png) on the Custom shelf.
 
 ### The Grindstone Interface
+
+#### Running Checks
+
+#### Responding to Errors
 
 
 ## Expanding Grindstone

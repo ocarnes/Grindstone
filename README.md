@@ -82,6 +82,38 @@ Each entry in the error list will be accomanied by up to two response options. T
 ###### Unused Nodes
 - This script checks for any unused/unknown nodes in your file. The auto-fix for this script will unlock and delete all unused nodes in the file.
 
+#### **Enumeration**
+
+###### Animation Node Enumeration
+- This script enumerates the animation nodes in your scene. There is no auto-fix for this script.
+
+###### Camera Node Enumeration
+- This script enumerates the camera nodes in your scene. There is no auto-fix for this script.
+
+###### Deformer Node Enumeration
+- This script enumerates the deformer nodes in your scene. There is no auto-fix for this script.
+
+###### Dynamics Node Enumeration
+- This script enumerates the dynamics nodes in your scene. There is no auto-fix for this script.
+
+###### Geometry Node Enumeration
+- This script enumerates the geometry nodes in your scene. There is no auto-fix for this script.
+
+###### Image Plane Node Enumeration
+- This script enumerates the image plane nodes in your scene. There is no auto-fix for this script.
+
+###### Lighting Node Enumeration
+- This script enumerates the lighting nodes in your scene. There is no auto-fix for this script.
+
+###### Shader Node Enumeration
+- This script enumerates the shader nodes in your scene. There is no auto-fix for this script.
+
+###### Texture Node Enumeration
+- This script enumerates the texture nodes in your scene. There is no auto-fix for this script.
+
+###### Utilities Node Enumeration
+- This script enumerates the utilities nodes in your scene. There is no auto-fix for this script.
+
 #### **Modeling**
 
 ###### Camera Count

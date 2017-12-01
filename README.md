@@ -21,6 +21,9 @@
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)
   - [Adding Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories)
   - [Naming Conventions](https://github.com/sadams115/Grindstone/blob/master/README.md#naming-conventions)
+  
+******************************************************************************
+******************************************************************************
 
 ## Overview
 &nbsp;&nbsp;&nbsp;&nbsp;Grindstone is a plug-in for the Maya 3D modeling software that will help streamline a team- based 
@@ -41,7 +44,8 @@ subdirectory and presented as a single sequence of scripts through the Grindston
 Although the primary component of this project is the script platform itself, Grindstone currently
 contains several scripts that address most of the initial set of errors identified by the DAC.
 
-
+******************************************************************************
+******************************************************************************
 
 ## Using Grindstone
 
@@ -75,8 +79,8 @@ This script checks for any non-local file paths in your file. There is no auto-f
 
 #### **Modeling**
 
-
-
+******************************************************************************
+******************************************************************************
 
 ## Expanding Grindstone
 

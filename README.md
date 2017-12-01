@@ -114,6 +114,8 @@ These steps outline the process of adding scripts to Grindstone:
 
 - Next, go through the template code and follow the instructions in every block comment. When you have completed the tasks outlined in each block comment, your new script will be automatically imported into Grindstone. Your `doCheck()` function will be run when the category is executed, and your `runFix()` function (if you implemented one) will be attached to the auto-fix button that accompanies your script's error report.
 
+- **Don't forget to add a description of your new script to the documentation [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories).**
+
 ******************************************************************************
 
 ### Adding Categories

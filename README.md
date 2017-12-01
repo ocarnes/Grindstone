@@ -111,6 +111,7 @@ Grindstone's production code is located at `P:/apps/maya/common/DACTools/Grindst
 ******************************************************************************
 
 ### Adding Categories
+If there is a bundle of scripts that apply to the same general problem set, you may want to construct another category. This may occur if you want to add a new pipeline stage or if you are working with a specific technology that brings its own set of errors. Fear not -- creating a new category is as easy as making a new folder in the gs_scripts directory and making or copying a blank `__init__.py` in that new folder.
 
 ******************************************************************************
 

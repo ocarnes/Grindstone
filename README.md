@@ -13,7 +13,7 @@
   - [Adding Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories)
 
 ## Overview
-  Grindstone is a plug-in for the Maya 3D modeling software that will help streamline a team- based 
+&nbsp;&nbsp;&nbsp;&nbsp;Grindstone is a plug-in for the Maya 3D modeling software that will help streamline a team- based 
 computer animation production workflow. The workflow of most 3D animation productions is the 
 pipeline – essentially an assembly line in which a complete product is assembled as it passes 
 through multiple stages of work. The problem that arises in such a process is that occasionally 
@@ -21,7 +21,7 @@ objects arrive at a stage either incomplete or with defects that should have bee
 previous stage. Grindstone aims to solve that problem by sitting between stages of the pipeline and 
 ensuring that any object passing from one stage to another is complete and error-free.
 
-  Targeting an initial set of errors provided by the UC Denver Digital Animation Center (DAC), 
+&nbsp;&nbsp;&nbsp;&nbsp;Targeting an initial set of errors provided by the UC Denver Digital Animation Center (DAC), 
 Grindstone was constructed using the Maya Python API to expose a selection of error-checking and 
 error-correcting functionality with the touch of a button. At its core, Grindstone is a script 
 deployment platform that allows developers to register their own error-checks/fixes and present 

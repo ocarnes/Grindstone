@@ -91,7 +91,7 @@ Each entry in the error list will be accomanied by up to two response options. T
 - This script will check that the transforms are frozen in the scene. The auto-fix freezes transforms for you.
 
 ###### Non-Quads
-- This script scans for non-quadrilateral geometry in your scene such as triangles or n-gons. The auto-fix will highlight all non-quads in your scene.
+- This script scans for non-quadrilateral geometry in your scene such as triangles or n-gons. The auto-fix will highlight any non-quads in your scene.
 
 ###### UVs
 - This script will make sure that all geometry has a UV map. There is no auto-fix for this script.
@@ -111,7 +111,7 @@ Grindstone's production code is located at `P:/apps/maya/common/DACTools/Grindst
 ******************************************************************************
 
 ### Adding Categories
-If there is a bundle of scripts that apply to the same general problem set, you may want to construct another category. This may occur if you want to add a new pipeline stage or if you are working with a specific technology that brings its own set of errors. Fear not -- creating a new category is as easy as making a new folder in the `gs_scripts` directory and making or copying a blank `__init__.py` in that new folder (a blank `__init__.py` file tells python that the directory is safe to import from). The name of the folder you created will be exposed in Grindstone as a new checkbox, and any scripts you put into that folder will be executed if you check the new box and press the "Run" button.
+If there is a bundle of scripts that apply to the same general problem set, you may want to construct another category. This may occur if you want to add a new pipeline stage or if you are working with a specific technology that brings its own set of errors. Fear not -- creating a new category is as easy as making a new folder in the `gs_scripts` directory and making or copying a blank `__init__.py` in that new folder (a blank `__init__.py` file tells python that the directory is safe to import from). The name of the folder you created will be exposed in Grindstone as a new checkbox, and any scripts you put into that folder will be executed if you check the new box and press the "Run" button. **Don't forget to add your new category to the documentation [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories).**
 
 ******************************************************************************
 

@@ -53,3 +53,7 @@ http://forums.cgsociety.org/archive/index.php?t-1173199.html
 => Text field modification via button
 => Confirmed to work when text field is set to non-editable
 https://stackoverflow.com/questions/33883474/how-to-change-the-text-for-textfield-command-maya-python
+
+
+=> PyQt with Maya
+https://www.youtube.com/watch?v=X7cO4MzhjKw

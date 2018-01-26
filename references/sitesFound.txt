@@ -60,3 +60,6 @@ https://www.youtube.com/watch?v=X7cO4MzhjKw
 
 => Brute force conversion of .ui to .py housed within Maya
 https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2017/ENU/Maya/files/GUID-FAD0F6CC-15D0-4489-9372-028146B70F49-htm.html
+
+=> Code functionality contained in QtDesigner (including Python)
+http://www.janpijpers.com/qt-and-maya-how-to-use-a-qt-designer-ui-with-maya-no-pyqt/

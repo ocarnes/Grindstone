@@ -45,21 +45,36 @@
     </column>
     <item>
      <property name="text">
-      <string>Check Type</string>
+      <string>Check type</string>
+     </property>
+     <property name="checkState">
+      <enum>Unchecked</enum>
      </property>
      <item>
       <property name="text">
        <string>A check</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
       </property>
      </item>
      <item>
       <property name="text">
        <string>Another check</string>
       </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>Moar checks</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
       </property>
      </item>
     </item>

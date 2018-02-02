@@ -63,3 +63,6 @@ https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhe
 
 => Code functionality contained in QtDesigner (including Python)
 http://www.janpijpers.com/qt-and-maya-how-to-use-a-qt-designer-ui-with-maya-no-pyqt/
+
+=> PyQt Tree Widget
+https://stackoverflow.com/questions/31342228/pyqt-tree-widget-adding-check-boxes-for-dynamic-removal

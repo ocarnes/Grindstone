@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2038</width>
+    <height>1246</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTreeView" name="treeView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>1881</width>
+      <height>1001</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>1861</width>
+      <height>971</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>Some stuff</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Some stuff on that stuff</string>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>Check type</string>
+     </property>
+     <property name="checkState">
+      <enum>Unchecked</enum>
+     </property>
+     <item>
+      <property name="text">
+       <string>A check</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Another check</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Moar checks</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>Another type</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>With some others</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>And so on</string>
+      </property>
+     </item>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2038</width>
+     <height>47</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,131 @@
+Grindstone Naming Conventions
+Sam Carnes and Sean Adams
+
+#********************************************* Files *********************************************#
+
+#******** Pieces ********#
+
+<file name> 
+	- uniquely identifies a file
+	- decomposes into <name components>
+	- examples: window, ScriptList_class, shelf_button_gen
+	
+<name component>
+	- individual strings that make up the <file name>
+	- separated by '_'
+	- decomposes into *strings* and <classes>
+	- examples: window, ScriptList_class, shelf, button, gen
+	
+<class> 
+	- the name of the class defined in the file
+	- exclusively for class definition files
+	- decomposes into *class names*_class
+	
+<extension>
+	- file extension
+	- examples: py, png
+	
+*string*	
+	- defined by user
+	- all lower case
+	
+*class name*
+	- defined by user
+	- Pascal case (camel case but with first letter capitalized)
+	
+	
+
+#******** Grammar ********#
+
+gs_<file name>.<extension>
+	
+<file name> --> <name component> | <name component>_<file name>
+		
+<name component> --> *string* | <class>
+
+<class> --> *class name*_class
+
+<extension> --> *string*
+
+
+#******** Examples ********#
+
+- 1) gs_window.py
+
+--> gs_<file name>.<extension>
+
+--> gs_<name component>.<extension>
+
+--> gs_window.<extension>
+
+--> gs_window.py
+
+
+
+- 2) gs_shelf_button_gen.py
+
+--> gs_<file name>.<extension> 
+
+--> gs_<name component>_<file name>.<extension>
+
+--> gs_<name component>_<name component>_<file name>.<extension>
+
+--> gs_<name component>_<name component>_<name component>.<extension>
+
+--> gs_shelf_button_gen.<extension>
+
+--> gs_shelf_button_gen.py
+
+
+
+- 3) gs_ScriptList_class.py
+
+--> gs_<file name>.<extension>
+
+--> gs_<name component>.<extension>
+
+--> gs_<class>.<extension>
+
+--> gs_ScriptList_class.<extension>
+
+--> gs_ScriptList_class.py
+
+
+
+#********************************************* Folders *********************************************#
+
+Folders can have whatever name makes sense, provided they begin with the 'gs_' prefix.
+
+Examples:
+	- gs_assets
+	- gs_scripts
+	
+Pipeline stage folders use Pascal case
+	- Common
+	- Modeling
+	
+	
+	
+#********************************************* Variables *********************************************#
+
+camel case
+	- regular variables that hold values
+	- function names
+	
+Pascal case
+	- class names
+	
+lower case with underscores
+	- variables representing file paths
+	
+	
+	
+#********************************************* Comments *********************************************#
+
+Every function must have a commented tag above it that distinguishes where that function starts
+
+Examples:
+	- __init__() --> #********** INIT **********#
+	
+	- runScripts() --> #********** RUN SCRIPTS **********#
+	

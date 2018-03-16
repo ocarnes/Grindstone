@@ -10,11 +10,8 @@ import maya.api.OpenMaya as OpenMaya
 import gs_assets.gs_shelf_button_gen as sbg
 from maya import OpenMayaUI as omui
 
-'''import importlib.util
-spec = importlib.util.spec_from_file_location("gs_window", "C:/Users/adamsse/Downloads/Grindstone/gs_window.py")
-gs_win = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(gs_win)'''
 
+# get the common GS components
 import sys
 sys.path.append('C:/Users/adamsse/Downloads/Grindstone')
 import gs_window as gs_win

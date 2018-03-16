@@ -50,6 +50,8 @@ class GrindstoneWindow(QtWidgets.QMainWindow):
         # this is the complete path to the Grindstone scripts
         scriptsPath = gs_path + gs_scr
         
+        sys.path.append(gs_path)
+        
         # clean up our data in case Maya still has it preserved in memory
         self.pipelineStages = []
         

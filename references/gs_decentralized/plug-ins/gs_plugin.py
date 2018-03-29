@@ -13,7 +13,7 @@ from maya import OpenMayaUI as omui
 
 # get the common GS components
 import sys
-sys.path.append('C:/Users/adamsse/Downloads/Grindstone')
+sys.path.append('P:/lib/Grindstone')
 import gs_window as gs_win
 
 gs_path = os.path.dirname(os.path.realpath(sbg.__file__))

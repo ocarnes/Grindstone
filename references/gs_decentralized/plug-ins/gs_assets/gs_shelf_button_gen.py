@@ -6,7 +6,7 @@
 import maya.cmds as cmds
 import maya.mel as mel
 
-theIcon = 'P:/lib/Grindstone/GS_icon_sm.png'
+theIcon = '/GS_icon_sm.png'
 
 buttonLabel = 'gsButton'
 

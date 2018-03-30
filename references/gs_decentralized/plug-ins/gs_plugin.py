@@ -13,7 +13,7 @@ from maya import OpenMayaUI as omui
 
 # get the common GS components
 import sys
-commonAssetsPath = 'P:/lib/Grindstone'
+commonAssetsPath = 'P:/lib/python/Grindstone'
 sys.path.append(commonAssetsPath)
 import gs_window as gs_win
 

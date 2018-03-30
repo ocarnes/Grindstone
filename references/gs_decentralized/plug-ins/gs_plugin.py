@@ -13,7 +13,8 @@ from maya import OpenMayaUI as omui
 
 # get the common GS components
 import sys
-sys.path.append('P:/lib/Grindstone')
+commonAssetsPath = 'P:/lib/Grindstone'
+sys.path.append(commonAssetsPath)
 import gs_window as gs_win
 
 gs_path = os.path.dirname(os.path.realpath(sbg.__file__))
@@ -69,7 +70,7 @@ def initializePlugin( mobject ):
     except:
         sys.stderr.write( 'Failed to register command: ' + MyCommandClass.kPluginCmdName )
         
-    sbg.hiButton("Custom", MyCommandClass.kPluginCmdName, gs_path)
+    sbg.hiButton("Custom", MyCommandClass.kPluginCmdName, commonAssetsPath)
 
 def uninitializePlugin( mobject ):
     # uninitialize the plug-in when Maya un-loads it.

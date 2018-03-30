@@ -11,8 +11,6 @@ from PySide2 import QtGui
 from PySide2 import QtWidgets
 
 # get the common GS components
-import sys
-sys.path.append('P:/lib/python/Grindstone')
 nuke.pluginAddPath('P:/lib/python/Grindstone')
 import gs_window as gs_win
 

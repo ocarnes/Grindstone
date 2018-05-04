@@ -175,8 +175,8 @@ Sometimes a developer might need to test Grindstone in various suites without di
 - at the top of the variables window, select `New...`
 - for variable name, put "PYTHONPATH"
 - for variable value, put any string; "stub" for example
-- click "OK" to create the new environment variable
-- click "OK" at the bottom of the variable window to save your changes
+- click `OK` to create the new environment variable
+- click `OK` at the bottom of the variable window to save your changes
 
 At this point, you have overridden the system's "PYTHONPATH" variable, meaning that GS-supported software suites will no longer know where to find the production GS assets. This allows you to set up your own local GS infrastructure and plug it in to each suite manually.
 

@@ -20,6 +20,7 @@
 - [Expanding Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#expanding-grindstone)
   - [Grindstone Location](https://github.com/sadams115/Grindstone/blob/master/README.md#grindstone-location)
   - [Enabling/Disabling Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#enablingdisabling-grindstone)
+  - [Disabling Grindstone for Dev Work](https://github.com/sadams115/Grindstone/blob/master/README.md#disabling-grindstone-on-a-single-computer-for-dev-work)
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)
   - [Adding Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories)
   - [Naming Conventions](https://github.com/sadams115/Grindstone/blob/master/README.md#naming-conventions)

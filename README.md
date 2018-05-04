@@ -148,6 +148,14 @@ Each entry in the error list will be accomanied by up to two response options. T
 ### Grindstone Location
 Grindstone's production code is located at `P:/apps/maya/common/DACTools/Grindstone`. Any production-ready changes to Grindstone can be made here. It is recommended that you develop scripts away from the production version, as any errors in your script will propogate across all computers in the DAC. If you would like to test with Grindstone outside of the production environment, you can simply copy the contents of the `P:/apps/maya/common/DACTools/Grindstone` directory into `Documents/maya/2018/plug-ins`.
 
+Grindstone's production code can be broken into two categories: common assets and software-specific assets.
+
+__Common__ - Grindstone's common assets are located at `P:/lib/python/Grindstone`. They govern the GS user interface; the piece that every software suite has in common.
+
+__Software-Specific__ - Grindstone's software-specific assets are located at `P:/apps/<software suite>/common/DACTools/Grindstone`. They include the software-specific scripts that Grindstone exposes to users as well as the plug-in component that loads Grindstone into the software suite.
+
+When a software suite starts up, the DAC pipeline infrastructure (not controlled by Grindstone) instructs the suite to process Grindstone's plugin-component from the software-specific assets. The plug-in component acquires and instantiates the common Grindstone assets, passing them the location of the scripts so that the GS window can show them to users.
+
 ******************************************************************************
 ### Enabling/Disabling Grindstone
 ******************************************************************************

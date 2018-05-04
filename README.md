@@ -24,7 +24,7 @@
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)
   - [Adding Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories)
   - [Naming Conventions](https://github.com/sadams115/Grindstone/blob/master/README.md#naming-conventions)
-- [Issues/User Feedback]()
+- [Issues/User Feedback](https://github.com/sadams115/Grindstone#issuesuser-feedback)
   
 ******************************************************************************
 ******************************************************************************

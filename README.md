@@ -35,7 +35,7 @@
 ## Using Grindstone
 
 ### How to Access Grindstone In Maya
-The production version of Grindstone is automatically loaded into Maya on startup. You can summon the Grindstone interface through a [button](plug-ins/gs_assets/GS_icon.png) on the Custom shelf.
+The production version of Grindstone is automatically loaded into Maya on startup. You can summon the Grindstone interface through a [button](gs_decentralized/Common/GS_icon.png) on the Custom shelf.
 
 ******************************************************************************
 

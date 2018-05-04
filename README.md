@@ -163,8 +163,12 @@ __Maya__ - Currently, Grindstone is loaded into Maya on lines 10 - 13 of `P:/app
 __Nuke__ - Currently, Grindstone is loaded into Nuke on line 23 of `P:/apps/nuke/common/init.py`. Commenting out this line will disable Grindstone in Nuke. Un-commenting it will re-enable Grindstone in Nuke.
 
 __Houdini__ - Currently, Grindstone is not being loaded automatically in Houdini. This is because the DAC pipeline infrastructure for Houdini has yet to be truly built. That said, there is a file in place that should load Grindstone automatically if the rest of the pipeline infrastructure points Houdini to it -- `P:/apps/houdini/common/456.py`. For now, the file serves only to load Grindstone.
-******************************************************************************
 
+******************************************************************************
+### Disabling Grindstone on a Single Computer for Dev Work
+
+
+******************************************************************************
 
 ### Adding Scripts
 These steps outline the process of adding scripts to Grindstone:

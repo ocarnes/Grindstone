@@ -152,10 +152,17 @@ __Common__ - Grindstone's common assets are located at `P:/lib/python/Grindstone
 
 __Software-Specific__ - Grindstone's software-specific assets are located at `P:/apps/<software suite>/common/DACTools/Grindstone`. They include the software-specific scripts that Grindstone exposes to users as well as the plug-in component that loads Grindstone into the software suite.
 
-When a software suite starts up, the DAC pipeline infrastructure (not controlled by Grindstone) instructs the suite to process Grindstone's plugin-component from the software-specific assets. The plug-in component acquires and instantiates the common Grindstone assets, passing them the location of the scripts so that the GS window can show them to users.
+When a software suite starts up, the DAC pipeline infrastructure (__not controlled by Grindstone__) instructs the suite to process Grindstone's plugin-component from the software-specific assets. The plug-in component acquires and instantiates the common Grindstone assets, passing them the location of the scripts so that the GS window can show them to users.
 
 ******************************************************************************
 ### Enabling/Disabling Grindstone
+Grindstone loads into software suites automatically because the DAC pipeline infrastructure instructs each supported suite to plug it in on startup. Those instructions depend on the software suite in question.
+
+__Maya__ - Currently, Grindstone is loaded into Maya on lines 10 - 13 of `P:/apps/maya/common/userSetup.py`. Simply commenting out these lines will disable Grindstone in Maya. Un-commenting them will re-enable Grindstone in Maya.
+
+__Nuke__ - Currently, Grindstone is loaded into Nuke on line 23 of `P:/apps/nuke/common/init.py`. Commenting out this line will disable Grindstone in Nuke. Un-commenting it will re-enable Grindstone in Nuke.
+
+__Houdini__ - Currently, Grindstone is not being loaded automatically in Houdini. This is because the DAC pipeline infrastructure for Houdini has yet to be truly built. That said, there is a file in place that should load Grindstone automatically if the rest of the pipeline infrastructure points Houdini to it -- `P:/apps/houdini/common/456.py`. For now, the file serves only to load Grindstone.
 ******************************************************************************
 
 

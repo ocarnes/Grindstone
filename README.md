@@ -8,9 +8,7 @@
 ### Contents
 - [Overview](https://github.com/sadams115/Grindstone/blob/master/README.md#overview)
 - [Using Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#using-grindstone)
-  - [How to Access Grindstone In Maya](https://github.com/sadams115/Grindstone/blob/master/README.md#how-to-access-grindstone-in-maya)
-  - [How to Access Grindstone In Nuke](https://github.com/sadams115/Grindstone#how-to-access-grindstone-in-nuke)
-  - [How to Access Grindstone In Houdini](https://github.com/sadams115/Grindstone#how-to-access-grindstone-in-houdini)
+  - [How to Access Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#how-to-access-grindstone-in-maya)
   - [The Grindstone Interface](https://github.com/sadams115/Grindstone/blob/master/README.md#the-grindstone-interface)
     - [Running Checks](https://github.com/sadams115/Grindstone/blob/master/README.md#running-checks)
     - [Responding to Errors](https://github.com/sadams115/Grindstone/blob/master/README.md#responding-to-errors)

@@ -24,6 +24,7 @@
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)
   - [Adding Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories)
   - [Naming Conventions](https://github.com/sadams115/Grindstone/blob/master/README.md#naming-conventions)
+- [Issues/User Feedback]()
   
 ******************************************************************************
 ******************************************************************************
@@ -203,3 +204,11 @@ If there is a bundle of scripts that apply to the same general problem set, you 
 
 ### Naming Conventions
 A full guide to Grindstone conventions can be found [here](references/Grindstone_Naming_Conventions.txt).
+
+******************************************************************************
+******************************************************************************
+
+## Issues/User Feedback
+A full list of known issues and/or planned enhancements can be found [here](https://github.com/sadams115/Grindstone/issues).
+
+******************************************************************************

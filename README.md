@@ -55,6 +55,8 @@ Each entry in the error list will be accomanied by up to two response options. T
 
 ******************************************************************************
 
+******************************************************************************
+
 ## The Scripts
 
 ### Maya
@@ -122,9 +124,15 @@ Each entry in the error list will be accomanied by up to two response options. T
 - This script will make sure that all geometry has a UV map. There is no auto-fix for this script.
 
 
+******************************************************************************
+
+
 ### Nuke
 
 #### Currently, there are no productions scripts for Nuke
+
+
+******************************************************************************
 
 
 ### Houdini

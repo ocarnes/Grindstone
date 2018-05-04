@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="gs_houdini" label="Grindstone" icon="P:/lib/python/Grindstone/GS_icon_sm.png">
+    <script scriptType="python"><![CDATA[import os
+import sys
+
+from PySide2 import QtCore
+from PySide2 import QtGui
+from PySide2 import QtWidgets
+
+import hou
+
+commonAssetsPath = 'P:/lib/python/Grindstone'
+sys.path.append(commonAssetsPath)
+
+import gs_window as gs_win
+
+windowProvider = gs_win.GrindstoneWindow(parent = hou.ui.mainQtWindow(), gs_path = 'P:/apps/houdini/common/DACTools/Grindstone')
+
+windowProvider.setParent(hou.ui.mainQtWindow(), QtCore.Qt.Window)
+
+windowProvider.show()]]></script>
+  </tool>
+
+  <toolshelf name="dacTools" label="DACTools">
+    <memberTool name="gs_houdini"/>
+  </toolshelf>
+</shelfDocument>

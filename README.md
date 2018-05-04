@@ -37,18 +37,18 @@
 ### How to Access Grindstone
 Grindstone should be automatically loaded into any supported software suite. There is a [button](gs_decentralized/Common/GS_icon.png) in each of those suites that summons the Grindstone interface.
 
-Maya - look on the Custom shelf.
+__Maya__ - look on the Custom shelf.
 
-Nuke - look at the top, on the Nuke main menu bar.
+__Nuke__ - look at the top, on the Nuke main menu bar.
 
-Houdini - look on the DACTools shelf.
+__Houdini__ - look on the DACTools shelf.
 
 ******************************************************************************
 
 ### The Grindstone Interface
 
 #### Running Checks
-To the left of the Grindstone interface are several checkboxes and a "Run" button. These checkboxes represent different categories of scripts. Each category is a bundle of scripts that are related to each other in some way (by pipeline stage, technology, etc.). After you make a selection of categories to execute, simply press the "Run" button. A list of errors detected by the scripts you ran will populate to the right of the screen. A detailed list of what scripts are included in each category can be found [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories).
+To the left of the Grindstone interface are several checkboxes and a "Run" button. These checkboxes represent different categories of scripts. Each category is a bundle of scripts that are related to each other in some way (by pipeline stage, technology, etc.). The "+" icon to the left of each category will expand the selection and show you every script inside that category. After you make a selection of scripts to execute, simply press the "Run" button. A list of errors detected by the scripts you ran will populate to the right of the screen. A detailed list of what scripts are included in each category can be found [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories).
 
 #### Responding to Errors
 Each entry in the error list will be accomanied by up to two response options. The first is to ignore the error in the event that there is no auto-fix available or you want to address the issue manually. Errors with an available auto-fix will include a second option to execute that auto-fix. The text on the auto-fix button itself briefly describes what the auto-fix will do. A detailed list of available auto-fixes and exactly what they do can be found [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories).

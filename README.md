@@ -148,6 +148,9 @@ Each entry in the error list will be accomanied by up to two response options. T
 Grindstone's production code is located at `P:/apps/maya/common/DACTools/Grindstone`. Any production-ready changes to Grindstone can be made here. It is recommended that you develop scripts away from the production version, as any errors in your script will propogate across all computers in the DAC. If you would like to test with Grindstone outside of the production environment, you can simply copy the contents of the `P:/apps/maya/common/DACTools/Grindstone` directory into `Documents/maya/2018/plug-ins`.
 
 ******************************************************************************
+### Enabling/Disabling Grindstone
+******************************************************************************
+
 
 ### Adding Scripts
 These steps outline the process of adding scripts to Grindstone:

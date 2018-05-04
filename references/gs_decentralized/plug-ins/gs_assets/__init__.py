@@ -1,1 +1,0 @@
-# this file just marks the gs_assets directory as a safe import source

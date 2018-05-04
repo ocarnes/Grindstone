@@ -66,3 +66,6 @@ http://www.janpijpers.com/qt-and-maya-how-to-use-a-qt-designer-ui-with-maya-no-p
 
 => PyQt Tree Widget
 https://stackoverflow.com/questions/31342228/pyqt-tree-widget-adding-check-boxes-for-dynamic-removal
+
+=> Widget removal via button
+https://stackoverflow.com/questions/9899409/pyside-removing-a-widget-from-a-layout

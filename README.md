@@ -192,12 +192,12 @@ These steps outline the process of adding scripts to Grindstone:
 
 - Next, go through the template code and follow the instructions in every block comment. When you have completed the tasks outlined in each block comment, your new script will be automatically imported into Grindstone. Your `doCheck()` function will be run when the category is executed, and your `runFix()` function (if you implemented one) will be attached to the auto-fix button that accompanies your script's error report.
 
-- **Don't forget to add a description of your new script to the documentation [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories).**
+- **Don't forget to add a description of your new script to the documentation [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-scripts).**
 
 ******************************************************************************
 
 ### Adding Categories
-If there is a bundle of scripts that apply to the same general problem set, you may want to construct another category. This may occur if you want to add a new pipeline stage or if you are working with a specific technology that brings its own set of errors. Fear not -- creating a new category is as easy as making a new folder in the `gs_scripts` directory and making or copying a blank `__init__.py` in that new folder (a blank `__init__.py` file tells python that the directory is safe to import from). The name of the folder you created will be exposed in Grindstone as a new checkbox, and any scripts you put into that folder will be executed if you check the new box and press the "Run" button. **Don't forget to add your new category to the documentation [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories).**
+If there is a bundle of scripts that apply to the same general problem set, you may want to construct another category. This may occur if you want to add a new pipeline stage or if you are working with a specific technology that brings its own set of errors. Fear not -- creating a new category is as easy as making a new folder in the `gs_scripts` directory and making or copying a blank `__init__.py` in that new folder (a blank `__init__.py` file tells python that the directory is safe to import from). The name of the folder you created will be exposed in Grindstone as a new checkbox, and any scripts you put into that folder will be executed if you check the new box and press the "Run" button. **Don't forget to add your new category to the documentation [here](https://github.com/sadams115/Grindstone/blob/master/README.md#the-scripts).**
 
 ******************************************************************************
 

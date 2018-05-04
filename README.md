@@ -9,6 +9,8 @@
 - [Overview](https://github.com/sadams115/Grindstone/blob/master/README.md#overview)
 - [Using Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#using-grindstone)
   - [How to Access Grindstone In Maya](https://github.com/sadams115/Grindstone/blob/master/README.md#how-to-access-grindstone-in-maya)
+  - [How to Access Grindstone In Maya](https://github.com/sadams115/Grindstone/blob/master/README.md#how-to-access-grindstone-in-maya)
+  - [How to Access Grindstone In Maya](https://github.com/sadams115/Grindstone/blob/master/README.md#how-to-access-grindstone-in-maya)
   - [The Grindstone Interface](https://github.com/sadams115/Grindstone/blob/master/README.md#the-grindstone-interface)
     - [Running Checks](https://github.com/sadams115/Grindstone/blob/master/README.md#running-checks)
     - [Responding to Errors](https://github.com/sadams115/Grindstone/blob/master/README.md#responding-to-errors)
@@ -36,6 +38,12 @@
 
 ### How to Access Grindstone In Maya
 The production version of Grindstone is automatically loaded into Maya on startup. You can summon the Grindstone interface through a [button](gs_decentralized/Common/GS_icon.png) on the Custom shelf.
+
+### How to Access Grindstone In Nuke
+The production version of Grindstone is automatically loaded into Nuke on startup. You can summon the Grindstone interface through a [button](gs_decentralized/Common/GS_icon.png) on the main Nuke menu bar shelf.
+
+### How to Access Grindstone In Houdini
+The production version of Grindstone is automatically loaded into Houdini on startup. You can summon the Grindstone interface through a [button](gs_decentralized/Common/GS_icon.png) on the DACTools shelf.
 
 ******************************************************************************
 

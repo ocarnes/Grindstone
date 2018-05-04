@@ -167,7 +167,20 @@ __Houdini__ - Currently, Grindstone is not being loaded automatically in Houdini
 
 ******************************************************************************
 ### Disabling Grindstone on a Single Computer for Dev Work
+Sometimes a developer might need to test Grindstone in various suites without disrupting the production versions. In such a case, follow these steps to disable Grindstone for a single computer:
 
+- go to the start menu and type "environment" into the search bar
+- select "edit environment variables for your account"
+  - NOTE: you probably do not have permission to do it, but __do not__ edit the system environment variables
+- at the top of the variables window, select `New...`
+- for variable name, put "PYTHONPATH"
+- for variable value, put any string; "stub" for example
+- click "OK" to create the new environment variable
+- click "OK" at the bottom of the variable window to save your changes
+
+At this point, you have overridden the system's "PYTHONPATH" variable, meaning that GS-supported software suites will no longer know where to find the production GS assets. This allows you to set up your own local GS infrastructure and plug it in to each suite manually.
+
+When you want to restore the system "PYTHONPATH" so that Grindstone will auto-load again, simiply re-open the __account__ environment variables window, select your stub "PYTHONPATH" and delete it.
 
 ******************************************************************************
 

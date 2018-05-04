@@ -19,6 +19,7 @@
   - [Modeling](https://github.com/sadams115/Grindstone/blob/master/README.md#modeling)
 - [Expanding Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#expanding-grindstone)
   - [Grindstone Location](https://github.com/sadams115/Grindstone/blob/master/README.md#grindstone-location)
+  - [Enabling/Disabling Grindstone] (https://github.com/sadams115/Grindstone/blob/master/README.md#enablingdisabling-grindstone)
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)
   - [Adding Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories)
   - [Naming Conventions](https://github.com/sadams115/Grindstone/blob/master/README.md#naming-conventions)

@@ -12,11 +12,11 @@
   - [The Grindstone Interface](https://github.com/sadams115/Grindstone/blob/master/README.md#the-grindstone-interface)
     - [Running Checks](https://github.com/sadams115/Grindstone/blob/master/README.md#running-checks)
     - [Responding to Errors](https://github.com/sadams115/Grindstone/blob/master/README.md#responding-to-errors)
-  - [The Categories](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories)
-    - [Common](https://github.com/sadams115/Grindstone/blob/master/README.md#common)
-    - [Dynamics](https://github.com/sadams115/Grindstone/blob/master/README.md#dynamics)
-    - [Enumeration](https://github.com/sadams115/Grindstone/blob/master/README.md#enumeration)
-    - [Modeling](https://github.com/sadams115/Grindstone/blob/master/README.md#modeling)
+- [The Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#the-categories)
+  - [Common](https://github.com/sadams115/Grindstone/blob/master/README.md#common)
+  - [Dynamics](https://github.com/sadams115/Grindstone/blob/master/README.md#dynamics)
+  - [Enumeration](https://github.com/sadams115/Grindstone/blob/master/README.md#enumeration)
+  - [Modeling](https://github.com/sadams115/Grindstone/blob/master/README.md#modeling)
 - [Expanding Grindstone](https://github.com/sadams115/Grindstone/blob/master/README.md#expanding-grindstone)
   - [Grindstone Location](https://github.com/sadams115/Grindstone/blob/master/README.md#grindstone-location)
   - [Adding Scripts](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-scripts)
@@ -55,7 +55,9 @@ Each entry in the error list will be accomanied by up to two response options. T
 
 ******************************************************************************
 
-### The Categories
+## The Scripts
+
+### Maya
 
 #### **Common**
 
@@ -118,6 +120,16 @@ Each entry in the error list will be accomanied by up to two response options. T
 
 ###### UVs
 - This script will make sure that all geometry has a UV map. There is no auto-fix for this script.
+
+
+### Nuke
+
+#### Currently, there are no productions scripts for Nuke
+
+
+### Houdini
+
+#### Currently, there are no productions scripts for Houdini
 
 ******************************************************************************
 ******************************************************************************

@@ -185,10 +185,10 @@ When you want to restore the system "PYTHONPATH" so that Grindstone will auto-lo
 ******************************************************************************
 
 ### Adding Scripts
-These steps outline the process of adding scripts to Grindstone:
+Adding scripts to Grindstone is the same process regardless of which software suite you are working with. Simply follow these steps:
 - To add a new script to Grindstone, start by downloading the [script template](references/gs_template.py). Save template as a new script class file, keeping in mind the [Grindstone naming conventions](references/Grindstone_Naming_Conventions.txt). The name should reflect the error that the new script checks for, and each script should check for only a single error. 
 
-- Place your new script file in one of the category folders, or [create a new category](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories). 
+- Place your new script file in one of the category folders, or [create a new category](https://github.com/sadams115/Grindstone/blob/master/README.md#adding-categories). Category folders are located at `P:/apps/<software suite>/common/DACTools/Grindstone` in a `gs-scripts` folder. Depending on the suite, the `gs_scripts` folder may be at different levels, but never more than a couple levels down.
 
 - Next, go through the template code and follow the instructions in every block comment. When you have completed the tasks outlined in each block comment, your new script will be automatically imported into Grindstone. Your `doCheck()` function will be run when the category is executed, and your `runFix()` function (if you implemented one) will be attached to the auto-fix button that accompanies your script's error report.
 
